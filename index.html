@@ -1,361 +1,1891 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+<!DOCTYPE html><html lang="en-US"><head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mora</title>
+<link rel="alternate" type="application/rss+xml" title="Mora � Feed" href="https://wpdemo.ajufbox.com/mora/feed/">
+<link rel="alternate" type="application/rss+xml" title="Mora � Comments Feed" href="https://wpdemo.ajufbox.com/mora/comments/feed/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://wpdemo.ajufbox.com/mora/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwpdemo.ajufbox.com%2Fmora%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://wpdemo.ajufbox.com/mora/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwpdemo.ajufbox.com%2Fmora%2F&format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-block-site-logo-inline-css">
+.wp-block-site-logo{box-sizing:border-box;line-height:0}.wp-block-site-logo a{display:inline-block;line-height:0}.wp-block-site-logo.is-default-size img{height:auto;width:120px}.wp-block-site-logo img{height:auto;max-width:100%}.wp-block-site-logo a,.wp-block-site-logo img{border-radius:inherit}.wp-block-site-logo.aligncenter{margin-left:auto;margin-right:auto;text-align:center}:root :where(.wp-block-site-logo.is-style-rounded){border-radius:9999px}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/site-logo/style.min.css */
+</style>
+<style id="wp-block-group-inline-css">
+.wp-block-group{box-sizing:border-box}:where(.wp-block-group.wp-block-group-is-layout-constrained){position:relative}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/group/style.min.css */
+</style>
+<style id="wp-block-navigation-link-inline-css">
+.wp-block-navigation .wp-block-navigation-item__label{overflow-wrap:break-word}.wp-block-navigation .wp-block-navigation-item__description{display:none}.link-ui-tools{outline:1px solid #f0f0f0;padding:8px}.link-ui-block-inserter{padding-top:8px}.link-ui-block-inserter__back{margin-left:8px;text-transform:uppercase}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/navigation-link/style.min.css */
+</style>
+<link rel="stylesheet" id="wp-block-navigation-css" href="css/style.min.css" media="all">
+<link rel="stylesheet" id="mora-navigation-style-css" href="css/navigation.css" media="all">
+<style id="wp-block-button-inline-css">
+.wp-block-button__link{align-content:center;box-sizing:border-box;cursor:pointer;display:inline-block;height:100%;text-align:center;word-break:break-word}.wp-block-button__link.aligncenter{text-align:center}.wp-block-button__link.alignright{text-align:right}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}.wp-block-button[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons>.wp-block-button.has-custom-width{max-width:none}.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link{width:100%}.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons>.wp-block-button.wp-block-button__width-25{width:calc(25% - var(--wp--style--block-gap, .5em)*.75)}.wp-block-buttons>.wp-block-button.wp-block-button__width-50{width:calc(50% - var(--wp--style--block-gap, .5em)*.5)}.wp-block-buttons>.wp-block-button.wp-block-button__width-75{width:calc(75% - var(--wp--style--block-gap, .5em)*.25)}.wp-block-buttons>.wp-block-button.wp-block-button__width-100{flex-basis:100%;width:100%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-25{width:25%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-50{width:50%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-75{width:75%}.wp-block-button.is-style-squared,.wp-block-button__link.wp-block-button.is-style-squared{border-radius:0}.wp-block-button.no-border-radius,.wp-block-button__link.no-border-radius{border-radius:0!important}:root :where(.wp-block-button .wp-block-button__link.is-style-outline),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link){border:2px solid;padding:.667em 1.333em}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color)){color:currentColor}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background)){background-color:initial;background-image:none}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/button/style.min.css */
+</style>
+<style id="mora-button-style-inline-css">
+.wp-block-button__link{background-color:var(--wp--preset--color--primary);color:var(--block-button-color, #fff);border:2px solid transparent;border-radius:0;font-weight:700;letter-spacing:1px;line-height:1.5;transition:all 0.3s var(--timing-transition-1)}.wp-block-button:not(.is-style-outline)>.wp-block-button__link:not(.has-text-color,.has-background):hover{transform:translateY(-1px);box-shadow:6px 6px 0 0 var(--block-button-color-hover-shadow, var(--wp--preset--color--primary));background-color:var(--block-button-background-hover, #fff);color:var(--block-button-color-hover, #131313);border-color:var(--wp--preset--color--primary)}.wp-block-button:not(.is-style-outline)>.wp-block-button__link.has-background:hover{transform:translateY(-1px);color:var(--block-button-color-hover, #fff)}.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color,.has-background){color:var(--wp--preset--color--contrast-2);background-color:transparent;border:2px solid var(--wp--preset--color--contrast-2)}.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color,.has-background):hover{color:#ffffff;background-color:var(--wp--preset--color--primary);border-color:var(--wp--preset--color--primary)}.wp-block-button.is-style-link-with-icon>.wp-block-button__link{color:var(--wp--preset--color--contrast-3);background-color:transparent;transform:none;box-shadow:none;border:none;display:inline-flex;justify-content:center;align-items:center;column-gap:0.5rem;padding:0}.wp-block-button.is-style-link-with-icon>.wp-block-button__link i{font-size:3rem}.wp-block-button.is-style-link-with-icon>.wp-block-button__link:not(.has-text-color,.has-background):hover{color:var(--wp--preset--color--primary);background-color:transparent;transform:none;box-shadow:none;border:none}
+
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-content/themes/mora/assets/css/block/button.css */
+</style>
+<style id="wp-block-spacer-inline-css">
+.wp-block-spacer{clear:both}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/spacer/style.min.css */
+</style>
+<style id="mora-core-image-wrap-style-inline-css">
+.img-wrap{position:relative}.img-wrap-inner{border-radius:51% 49% 77% 23%/65% 50% 50% 35%;overflow:hidden}.img-wrap-circle{border:1px solid var(--wp--preset--color--contrast-2);border-radius:50%;height:100%;left:5%;position:absolute;right:unset;width:100%;z-index:-1}.img-wrap.is-style-circle-left .img-wrap-circle{left:unset;right:5%}.img-wrap .no-image-placeholder{background:var(--wp--preset--color--base-2);padding-bottom:100%;width:100%}.img-wrap img[data-aos=fade-up]{opacity:0;transform:translateY(10px) translateZ(.1px) scale(1.2)}
+
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-content/plugins/mora-core/build/image-wrap/style-index.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="mora-core-stroke-heading-with-subtitle-style-inline-css">
+.stroke-heading-with-subtitle{font-size:var(--xs-font-size);line-height:1}.stroke-heading-with-subtitle .subtitle{color:var(--wp--preset--color--primary);font-size:1.5rem;letter-spacing:.25em;text-transform:uppercase}@media(min-width:768px){.stroke-heading-with-subtitle{font-size:var(--md-font-size)}}@media(min-width:992px){.stroke-heading-with-subtitle{font-size:var(--lg-font-size)}}
+
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-content/plugins/mora-core/build/stroke-heading-with-subtitle/style-index.css */
+</style>
+<style id="mora-core-typed-text-style-inline-css">
+.typed-text{color:var(--typed-text-color)}.typed-text>*{display:inline-block}.typed-text p{display:none}
+
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-content/plugins/mora-core/build/typed-text/style-index.css */
+</style>
+<style id="mora-core-animated-headline-style-inline-css">
+.animated-headline{color:var(--wp--preset--color--contrast-1);font-size:var(--font-size)}.animated-headline>*{display:inline-block}.animated-headline .wp-block-mora-core-typed-text{display:block}.animated-headline .typed-text{white-space:nowrap}@media(min-width:576px){.animated-headline .wp-block-mora-core-typed-text{display:inline-block}}
+
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-content/plugins/mora-core/build/animated-headline/style-index.css */
+</style>
+<style id="wp-block-buttons-inline-css">
+.wp-block-buttons{box-sizing:border-box}.wp-block-buttons.is-vertical{flex-direction:column}.wp-block-buttons.is-vertical>.wp-block-button:last-child{margin-bottom:0}.wp-block-buttons>.wp-block-button{display:inline-block;margin:0}.wp-block-buttons.is-content-justification-left{justify-content:flex-start}.wp-block-buttons.is-content-justification-left.is-vertical{align-items:flex-start}.wp-block-buttons.is-content-justification-center{justify-content:center}.wp-block-buttons.is-content-justification-center.is-vertical{align-items:center}.wp-block-buttons.is-content-justification-right{justify-content:flex-end}.wp-block-buttons.is-content-justification-right.is-vertical{align-items:flex-end}.wp-block-buttons.is-content-justification-space-between{justify-content:space-between}.wp-block-buttons.aligncenter{text-align:center}.wp-block-buttons:not(.is-content-justification-space-between,.is-content-justification-right,.is-content-justification-left,.is-content-justification-center) .wp-block-button.aligncenter{margin-left:auto;margin-right:auto;width:100%}.wp-block-buttons[style*=text-decoration] .wp-block-button,.wp-block-buttons[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons .wp-block-button__link{width:100%}.wp-block-button.aligncenter{text-align:center}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/buttons/style.min.css */
+</style>
+<style id="wp-block-columns-inline-css">
+.wp-block-columns{box-sizing:border-box;display:flex;flex-wrap:wrap!important}@media (min-width:782px){.wp-block-columns{flex-wrap:nowrap!important}}.wp-block-columns{align-items:normal!important}.wp-block-columns.are-vertically-aligned-top{align-items:flex-start}.wp-block-columns.are-vertically-aligned-center{align-items:center}.wp-block-columns.are-vertically-aligned-bottom{align-items:flex-end}@media (max-width:781px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:100%!important}}@media (min-width:782px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column[style*=flex-basis]{flex-grow:0}}.wp-block-columns.is-not-stacked-on-mobile{flex-wrap:nowrap!important}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column[style*=flex-basis]{flex-grow:0}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}.wp-block-column{flex-grow:1;min-width:0;overflow-wrap:break-word;word-break:break-word}.wp-block-column.is-vertically-aligned-top{align-self:flex-start}.wp-block-column.is-vertically-aligned-center{align-self:center}.wp-block-column.is-vertically-aligned-bottom{align-self:flex-end}.wp-block-column.is-vertically-aligned-stretch{align-self:stretch}.wp-block-column.is-vertically-aligned-bottom,.wp-block-column.is-vertically-aligned-center,.wp-block-column.is-vertically-aligned-top{width:100%}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/columns/style.min.css */
+</style>
+<style id="wp-block-heading-inline-css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="outermost-icon-block-style-inline-css">
+.wp-block-outermost-icon-block{display:flex;line-height:0}.wp-block-outermost-icon-block.has-border-color{border:none}.wp-block-outermost-icon-block .has-icon-color svg,.wp-block-outermost-icon-block.has-icon-color svg{color:currentColor}.wp-block-outermost-icon-block .has-icon-color:not(.has-no-icon-fill-color) svg,.wp-block-outermost-icon-block.has-icon-color:not(.has-no-icon-fill-color) svg{fill:currentColor}.wp-block-outermost-icon-block .icon-container{box-sizing:border-box}.wp-block-outermost-icon-block a,.wp-block-outermost-icon-block svg{height:100%;transition:transform .1s ease-in-out;width:100%}.wp-block-outermost-icon-block a:hover{transform:scale(1.1)}.wp-block-outermost-icon-block svg{transform:rotate(var(--outermost--icon-block--transform-rotate,0deg)) scaleX(var(--outermost--icon-block--transform-scale-x,1)) scaleY(var(--outermost--icon-block--transform-scale-y,1))}.wp-block-outermost-icon-block .rotate-90,.wp-block-outermost-icon-block.rotate-90{--outermost--icon-block--transform-rotate:90deg}.wp-block-outermost-icon-block .rotate-180,.wp-block-outermost-icon-block.rotate-180{--outermost--icon-block--transform-rotate:180deg}.wp-block-outermost-icon-block .rotate-270,.wp-block-outermost-icon-block.rotate-270{--outermost--icon-block--transform-rotate:270deg}.wp-block-outermost-icon-block .flip-horizontal,.wp-block-outermost-icon-block.flip-horizontal{--outermost--icon-block--transform-scale-x:-1}.wp-block-outermost-icon-block .flip-vertical,.wp-block-outermost-icon-block.flip-vertical{--outermost--icon-block--transform-scale-y:-1}.wp-block-outermost-icon-block .flip-vertical.flip-horizontal,.wp-block-outermost-icon-block.flip-vertical.flip-horizontal{--outermost--icon-block--transform-scale-x:-1;--outermost--icon-block--transform-scale-y:-1}
+
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-content/plugins/icon-block/build/style.css */
+</style>
+<style id="mora-core-service-box-style-inline-css">
+.service-box{border:2px solid var(--service-box-border-color,#2d2d2d);color:var(--service-box-color,#2d2d2d);margin-bottom:2rem;padding:2rem}.service-box .icon{margin-bottom:1rem}.service-box .icon svg{height:3rem;width:3rem}.service-box .title{font-size:1.5rem;font-weight:400;margin-bottom:.5rem}.service-box .description,.service-box p{color:var(--service-box-description-color,#777);font-size:1.125rem;font-weight:300}.service-box{--service-box-border-color:var(--wp--preset--color--contrast-3);--service-box-color:var(--wp--preset--color--contrast-3);--service-box-description-color:var(--wp--preset--color--contrast-1)}@media(min-width:992px){.service-box{margin-bottom:0;padding:2rem 2.5rem}.service-box .title{font-size:2rem}}
+
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-content/plugins/mora-core/build/service-box/style-index.css */
+</style>
+<style id="mora-core-marquee-text-style-inline-css">
+.wp-block-mora-core-marquee-text{background-color:var(--marquee-text-background,var(--wp--preset--color--primary));color:var(--marquee-text-color,var(--wp--preset--color--white));font-size:clamp(3.037rem,2.2962rem + 3.704vw,6rem)}.marquee-text{overflow:hidden;position:relative;width:100%}.marquee-text-track{animation:marquee-animation var(--marquee-duration,40s) linear infinite;display:flex;flex-wrap:nowrap;transform:translateZ(0);width:-moz-fit-content;width:fit-content}.marquee-text-track.is-paused-on-hover:hover,.marquee-text-track.is-stoped{animation-play-state:paused}.marquee-text-content{align-items:center;display:flex;justify-content:space-around;overflow:hidden}.marquee-text-content p{font-weight:700;margin:0 1rem;padding:0 1rem;text-transform:uppercase;white-space:nowrap}.marquee-text-content .stroke-text-bolder{-webkit-text-stroke:1px var(--marquee-text-color,var(--wp--preset--color--white))}@keyframes marquee-animation{0%{transform:translateZ(0)}to{transform:translate3d(-50%,0,0)}}@media(prefers-reduced-motion:reduce){.marquee-text{animation:none!important}}@media(min-width:992px){.marquee-text-wrap{width:100%}.marquee-text p{margin:0 3rem}}
+
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-content/plugins/mora-core/build/marquee-text/style-index.css */
+</style>
+<style id="mora-core-multiline-heading-style-inline-css">
+.multiline-heading{font-size:var(--xs-font-size);font-weight:400;line-height:inherit}.multiline-heading p{display:inline-block}@media(min-width:768px){.multiline-heading{font-size:var(--md-font-size)}}@media(min-width:992px){.multiline-heading{font-size:var(--lg-font-size)}}
+
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-content/plugins/mora-core/build/multiline-heading/style-index.css */
+</style>
+<style id="mora-core-work-experience-style-inline-css">
+.experience-item{position:relative}.experience-item-line{border:1px solid var(--wp--preset--color--contrast-3);content:"";height:100%;left:calc(1rem - 2px);padding:0!important;position:absolute!important;top:1rem;width:1px!important;z-index:3}.experience-item:after{background:var(--wp--preset--color--primary);content:"";height:4px;left:calc(.5rem - 1px);position:absolute;top:.75rem;width:1rem;z-index:4}.experience-item:last-child{margin-bottom:0}.experience-item>div{padding-left:3rem}.experience-item>div:first-child{margin-bottom:1.5rem}.experience-item__duration{color:var(--experience-item-color-duration,var(--wp--preset--color--tint-3));font-size:.875rem}.experience-item__title{color:var(--wp--preset--color--contrast-2);font-size:1.125rem;font-weight:500;margin-bottom:.5rem}.experience-item__org{font-size:1.125rem;font-weight:500;margin-bottom:.25rem}.experience-item__desc{color:var(--experience-item-color-description,var(--wp--preset--color--tint-3));display:inline-block;font-size:1rem;max-width:500px}.experience-item__icon{margin-bottom:.5rem}.experience-item__icon svg{color:var(--experience-item-color-icon,var(--wp--preset--color--contrast-2));height:3rem;width:3rem}.experience-item__icon i{font-size:2.5rem;line-height:0}@media(min-width:992px){.experience-item-line{left:calc(50% - 1px)}.experiences-container{margin-bottom:10rem}.experiences-container:after{left:calc(50% - 1px)}.experience-item:after{left:0;margin:0 auto;right:0}.experience-item>div{padding:0 2rem}.experience-item>div:first-child{margin-bottom:0}}
+
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-content/plugins/mora-core/build/work-experience/style-index.css */
+</style>
+<style id="mora-core-skill-counter-style-inline-css">
+.skill-progress-item{margin-bottom:25px;overflow:hidden}.skill-progress-item:last-child{margin-bottom:0}.skill-progress-item .title{font-size:1rem;font-weight:400;letter-spacing:4px;margin-bottom:10px;padding:1rem 0;text-transform:uppercase}.skill-progress-item .progress{background-color:var(--wp--preset--color--base-3);border-radius:0;height:8px;overflow:unset}.skill-progress-item .progress-bar{background-color:var(--wp--preset--color--contrast-2);overflow:inherit;position:relative}.skill-progress-item .progress-bar span{background-color:var(--wp--preset--color--primary);bottom:20px;color:#fff;display:block;font-size:11px;font-weight:700;line-height:1;padding:4px 7px;position:absolute;right:3px}.skill-progress-item .progress-bar span:before{background-color:var(--wp--preset--color--primary);bottom:-5px;clip-path:polygon(100% 0,0 0,100% 100%);content:"";height:8px;position:absolute;right:0;width:8px}
+
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-content/plugins/mora-core/build/skill-counter/style-index.css */
+</style>
+<style id="mora-core-project-box-style-inline-css">
+.project-box{cursor:pointer}.project-box-container{background:var(--wp--preset--color--base-2);clip-path:inset(-1px);overflow:hidden;position:relative;transition:all 2s ease-out;will-change:clip-path}.project-box-container.no-image{padding-bottom:110%}.project-box-container[data-aos=scalexIn]{opacity:0;transform:scaleX(0);transform-origin:left center}.project-box-container[data-aos=scalexIn].aos-animate{opacity:1;transform:scaleX(1)}.project-box-container img{height:auto;max-width:100%;transition:all 2s ease-out}.project-box .content-overlay{align-items:end;background:linear-gradient(0deg,var(--wp--preset--color--base-1) 0,transparent 60%);display:flex;height:100%;left:0;opacity:0;padding:0 2rem 1rem;position:absolute;top:0;transition:all .5s ease-out;width:100%}.project-box .content-overlay.is-preview{opacity:1}.project-box .project-title{color:var(--wp--preset--color--contrast-2);font-size:1.25rem;font-weight:500;letter-spacing:.15rem;text-transform:uppercase}.project-box .project-description{color:var(--wp--preset--color--tint-2)}.project-box:hover .components-button,.project-box:hover .content-overlay{opacity:1}.project-box:hover .project-box-container{clip-path:inset(10px)}.project-box:hover .project-box-container img{transform:scale(1.05) rotate(.001deg) translateZ(0)}
+
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-content/plugins/mora-core/build/project-box/style-index.css */
+</style>
+<style id="mora-core-testimonial-card-style-inline-css">
+.testimonial-item{border:2px solid var(--testimonial-card-border-color,var(--wp--preset--color--contrast-2));margin-top:3rem;padding:2rem;position:relative}.testimonial-item__text{margin-bottom:0;padding-left:0;text-align:center}.testimonial-item__text:before{content:""}.testimonial-item__text p{color:var(--color-dark-3);color:var(--testimonial-card-text,var(--wp--preset--color--contrast-1));font-size:1.125rem;letter-spacing:-.015em;line-height:1.5;margin-bottom:0;padding-left:0}.testimonial-item__client{font-weight:400;letter-spacing:0;line-height:1.45;margin-bottom:1.5rem;margin-top:auto;padding-top:1rem}.testimonial-item__client-name{color:var(--testimonial-card-client-name,var(--wp--preset--color--contrast-2));font-size:1.25rem}.testimonial-item__client-occ{color:var(--testimonial-card-client-job,var(--wp--preset--color--tint-3));font-size:.875rem;letter-spacing:.025em}.testimonial-item__client-img{background:var(--wp--preset--color--base-2);border-radius:50%;height:5rem;left:calc(50% - 2.5rem);margin-bottom:.5rem;overflow:hidden;position:absolute;top:-2.5rem;width:5rem}.testimonial-item__client-img img{border-radius:50%;height:5rem;transition:all .7s var(--timing-transition-1);width:5rem}.swiper-slide .testimonial-item__client-img img{filter:grayscale(100%)}.swiper-slide-active .testimonial-item__client-img img{filter:grayscale(0)}
+
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-content/plugins/mora-core/build/testimonial-card/style-index.css */
+</style>
+<style id="mora-core-slider-style-inline-css">
+.mora-slider{padding-top:3rem}.mora-slider,.mora-slider.swiper{overflow:visible}.mora-slider-nav{gap:1rem}.mora-slider-nav .wp-block-button__link{align-items:center;display:inline-flex;font-size:1.75rem;height:4rem;justify-content:center;padding:0;transition:all .4s var(--timing-transition-1);width:4rem}.mora-slider-pagination{--swiper-pagination-bullet-inactive-color:var(--wp--preset--color--tint-3);--swiper-pagination-color:var(--wp--preset--color--primary);--swiper-pagination-bullet-border-radius:0px;--swiper-pagination-bullet-width:0.8rem;--swiper-pagination-bullet-height:0.8rem;--swiper-pagination-bullet-inactive-opacity:0.5}.mora-slider-pagination .swiper-pagination-bullet{transition:all .7s var(--timing-transition-1)}.mora-slider-pagination.swiper-pagination-bullets.swiper-pagination-horizontal{width:auto}.mora-slider-action-container{align-items:center;display:flex;justify-content:space-between;margin-top:3rem}.swiper-slide{cursor:grab}
+
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-content/plugins/mora-core/build/slider/style-index.css */
+</style>
+<style id="wp-block-post-featured-image-inline-css">
+.wp-block-post-featured-image{margin-left:0;margin-right:0}.wp-block-post-featured-image a{display:block;height:100%}.wp-block-post-featured-image :where(img){box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom;width:100%}.wp-block-post-featured-image.alignfull img,.wp-block-post-featured-image.alignwide img{width:100%}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim{background-color:#000;inset:0;position:absolute}.wp-block-post-featured-image{position:relative}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-gradient{background-color:initial}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-0{opacity:0}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-10{opacity:.1}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-20{opacity:.2}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-30{opacity:.3}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-40{opacity:.4}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-50{opacity:.5}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-60{opacity:.6}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-70{opacity:.7}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-80{opacity:.8}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-90{opacity:.9}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-100{opacity:1}.wp-block-post-featured-image:where(.alignleft,.alignright){width:100%}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/post-featured-image/style.min.css */
+</style>
+<style id="wp-block-post-title-inline-css">
+.wp-block-post-title{box-sizing:border-box;word-break:break-word}.wp-block-post-title :where(a){display:inline-block;font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;text-decoration:inherit}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/post-title/style.min.css */
+</style>
+<style id="wp-block-quote-inline-css">
+.wp-block-quote{box-sizing:border-box;overflow-wrap:break-word}.wp-block-quote.is-large:where(:not(.is-style-plain)),.wp-block-quote.is-style-large:where(:not(.is-style-plain)){margin-bottom:1em;padding:0 1em}.wp-block-quote.is-large:where(:not(.is-style-plain)) p,.wp-block-quote.is-style-large:where(:not(.is-style-plain)) p{font-size:1.5em;font-style:italic;line-height:1.6}.wp-block-quote.is-large:where(:not(.is-style-plain)) cite,.wp-block-quote.is-large:where(:not(.is-style-plain)) footer,.wp-block-quote.is-style-large:where(:not(.is-style-plain)) cite,.wp-block-quote.is-style-large:where(:not(.is-style-plain)) footer{font-size:1.125em;text-align:right}.wp-block-quote>cite{display:block}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/quote/style.min.css */
+</style>
+<style id="wp-block-table-inline-css">
+.wp-block-table{overflow-x:auto}.wp-block-table table{border-collapse:collapse;width:100%}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{border:1px solid;padding:.5em}.wp-block-table .has-fixed-layout{table-layout:fixed;width:100%}.wp-block-table .has-fixed-layout td,.wp-block-table .has-fixed-layout th{word-break:break-word}.wp-block-table.aligncenter,.wp-block-table.alignleft,.wp-block-table.alignright{display:table;width:auto}.wp-block-table.aligncenter td,.wp-block-table.aligncenter th,.wp-block-table.alignleft td,.wp-block-table.alignleft th,.wp-block-table.alignright td,.wp-block-table.alignright th{word-break:break-word}.wp-block-table .has-subtle-light-gray-background-color{background-color:#f3f4f5}.wp-block-table .has-subtle-pale-green-background-color{background-color:#e9fbe5}.wp-block-table .has-subtle-pale-blue-background-color{background-color:#e7f5fe}.wp-block-table .has-subtle-pale-pink-background-color{background-color:#fcf0ef}.wp-block-table.is-style-stripes{background-color:initial;border-collapse:inherit;border-spacing:0}.wp-block-table.is-style-stripes tbody tr:nth-child(odd){background-color:#f0f0f0}.wp-block-table.is-style-stripes.has-subtle-light-gray-background-color tbody tr:nth-child(odd){background-color:#f3f4f5}.wp-block-table.is-style-stripes.has-subtle-pale-green-background-color tbody tr:nth-child(odd){background-color:#e9fbe5}.wp-block-table.is-style-stripes.has-subtle-pale-blue-background-color tbody tr:nth-child(odd){background-color:#e7f5fe}.wp-block-table.is-style-stripes.has-subtle-pale-pink-background-color tbody tr:nth-child(odd){background-color:#fcf0ef}.wp-block-table.is-style-stripes td,.wp-block-table.is-style-stripes th{border-color:#0000}.wp-block-table.is-style-stripes{border-bottom:1px solid #f0f0f0}.wp-block-table .has-border-color td,.wp-block-table .has-border-color th,.wp-block-table .has-border-color tr,.wp-block-table .has-border-color>*{border-color:inherit}.wp-block-table table[style*=border-top-color] tr:first-child,.wp-block-table table[style*=border-top-color] tr:first-child td,.wp-block-table table[style*=border-top-color] tr:first-child th,.wp-block-table table[style*=border-top-color]>*,.wp-block-table table[style*=border-top-color]>* td,.wp-block-table table[style*=border-top-color]>* th{border-top-color:inherit}.wp-block-table table[style*=border-top-color] tr:not(:first-child){border-top-color:initial}.wp-block-table table[style*=border-right-color] td:last-child,.wp-block-table table[style*=border-right-color] th,.wp-block-table table[style*=border-right-color] tr,.wp-block-table table[style*=border-right-color]>*{border-right-color:inherit}.wp-block-table table[style*=border-bottom-color] tr:last-child,.wp-block-table table[style*=border-bottom-color] tr:last-child td,.wp-block-table table[style*=border-bottom-color] tr:last-child th,.wp-block-table table[style*=border-bottom-color]>*,.wp-block-table table[style*=border-bottom-color]>* td,.wp-block-table table[style*=border-bottom-color]>* th{border-bottom-color:inherit}.wp-block-table table[style*=border-bottom-color] tr:not(:last-child){border-bottom-color:initial}.wp-block-table table[style*=border-left-color] td:first-child,.wp-block-table table[style*=border-left-color] th,.wp-block-table table[style*=border-left-color] tr,.wp-block-table table[style*=border-left-color]>*{border-left-color:inherit}.wp-block-table table[style*=border-style] td,.wp-block-table table[style*=border-style] th,.wp-block-table table[style*=border-style] tr,.wp-block-table table[style*=border-style]>*{border-style:inherit}.wp-block-table table[style*=border-width] td,.wp-block-table table[style*=border-width] th,.wp-block-table table[style*=border-width] tr,.wp-block-table table[style*=border-width]>*{border-style:inherit;border-width:inherit}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/table/style.min.css */
+</style>
+<style id="wp-block-post-excerpt-inline-css">
+:where(.wp-block-post-excerpt){box-sizing:border-box;margin-bottom:var(--wp--style--block-gap);margin-top:var(--wp--style--block-gap)}.wp-block-post-excerpt__excerpt{margin-bottom:0;margin-top:0}.wp-block-post-excerpt__more-text{margin-bottom:0;margin-top:var(--wp--style--block-gap)}.wp-block-post-excerpt__more-link{display:inline-block}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/post-excerpt/style.min.css */
+</style>
+<style id="wp-block-post-author-inline-css">
+.wp-block-post-author{box-sizing:border-box;display:flex;flex-wrap:wrap}.wp-block-post-author__byline{font-size:.5em;margin-bottom:0;margin-top:0;width:100%}.wp-block-post-author__avatar{margin-right:1em}.wp-block-post-author__bio{font-size:.7em;margin-bottom:.7em}.wp-block-post-author__content{flex-basis:0;flex-grow:1}.wp-block-post-author__name{margin:0}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/post-author/style.min.css */
+</style>
+<style id="wp-block-post-date-inline-css">
+.wp-block-post-date{box-sizing:border-box}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/post-date/style.min.css */
+</style>
+<style id="wp-block-post-template-inline-css">
+.wp-block-post-template{box-sizing:border-box;list-style:none;margin-bottom:0;margin-top:0;max-width:100%;padding:0}.wp-block-post-template.is-flex-container{display:flex;flex-direction:row;flex-wrap:wrap;gap:1.25em}.wp-block-post-template.is-flex-container>li{margin:0;width:100%}@media (min-width:600px){.wp-block-post-template.is-flex-container.is-flex-container.columns-2>li{width:calc(50% - .625em)}.wp-block-post-template.is-flex-container.is-flex-container.columns-3>li{width:calc(33.33333% - .83333em)}.wp-block-post-template.is-flex-container.is-flex-container.columns-4>li{width:calc(25% - .9375em)}.wp-block-post-template.is-flex-container.is-flex-container.columns-5>li{width:calc(20% - 1em)}.wp-block-post-template.is-flex-container.is-flex-container.columns-6>li{width:calc(16.66667% - 1.04167em)}}@media (max-width:600px){.wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid{grid-template-columns:1fr}}.wp-block-post-template-is-layout-constrained>li>.alignright,.wp-block-post-template-is-layout-flow>li>.alignright{float:right;margin-inline-end:0;margin-inline-start:2em}.wp-block-post-template-is-layout-constrained>li>.alignleft,.wp-block-post-template-is-layout-flow>li>.alignleft{float:left;margin-inline-end:2em;margin-inline-start:0}.wp-block-post-template-is-layout-constrained>li>.aligncenter,.wp-block-post-template-is-layout-flow>li>.aligncenter{margin-inline-end:auto;margin-inline-start:auto}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/post-template/style.min.css */
+</style>
+<style id="mora-core-contact-detail-style-inline-css">
+.contact-item{-moz-column-gap:1.5rem;column-gap:1.5rem}.ci-icon,.contact-item{align-items:center;display:flex}.ci-icon{background:var(--wp--preset--color--primary);border-radius:50%;color:#fff;flex-shrink:0;font-size:24px;height:4.5rem;justify-content:center;text-align:center;width:4.5rem}.ci-icon svg{height:2rem;width:2rem}.ci-text{font-size:1rem;line-height:1.625}.ci-text,.ci-text-title{color:var(--wp--preset--color--contrast-2)}.ci-text-title{font-size:1.25rem;font-weight:700;letter-spacing:.25rem;text-transform:uppercase}.ci-text-detail{color:var(--wp--preset--color--tint-3);font-size:1.125rem;letter-spacing:.025em}
+
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-content/plugins/mora-core/build/contact-detail/style-index.css */
+</style>
+<link rel="stylesheet" id="dashicons-css" href="css/dashicons.min.css" media="all">
+<link rel="stylesheet" id="nf-display-css" href="css/display-opinions-light.css" media="all">
+<link rel="stylesheet" id="nf-font-awesome-css" href="css/font-awesome.min.css" media="all">
+<style id="wp-block-post-content-inline-css">
+.wp-block-post-content{display:flow-root}
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/blocks/post-content/style.min.css */
+</style>
+<style id="mora-core-social-media-icon-style-inline-css">
+.social-media-link{align-items:center;background-color:var(--wp--preset--color--base-2);border-radius:50%;color:var(--wp--preset--color--contrast-2);display:inline-flex;height:3rem;justify-content:center;width:3rem}.social-media-link:hover{background-color:var(--wp--preset--color--primary)!important;color:#fff!important}
+
+/*# sourceURL=https://wpdemo.ajufbox.com/mora/wp-content/plugins/mora-core/build/social-media-icon/style-index.css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+
+
+/* Individual Colors */
+.python {
+    background: linear-gradient(135deg, #306998, #FFD43B);
+}
+
+
+.bash {
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
+}
+
+.html {
+    background: linear-gradient(135deg, #e44d26, #f16529);
+}
+
+.css {
+    background: linear-gradient(135deg, #264de4, #2965f1);
+}
+
+.go {
+    background: linear-gradient(135deg, #00ADD8, #007d9c);
+}
+
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<link rel="stylesheet" id="bootstrap-style-editor-css" href="css/bootstrap.min.css" media="all">
+<link rel="stylesheet" id="bootstrap-icon-css" href="css/bootstrap-icons.min.css" media="all">
+<link rel="stylesheet" id="swiper-style-css" href="css/swiper-bundle.min.css" media="all">
+<link rel="stylesheet" id="splitting-text-style-css" href="css/splitting.css" media="all">
+<link rel="stylesheet" id="aos-style-css" href="css/aos.css" media="all">
+<link rel="stylesheet" id="mora-fontawesome-css" href="css/font-awesome.css" media="all">
+<link rel="stylesheet" id="mora-style-css" href="css/main.css" media="all">
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--primary: #0A3981;--wp--preset--color--base-1: #f8fafb;--wp--preset--color--base-2: #f0f0f0;--wp--preset--color--base-3: #e9e9e9;--wp--preset--color--tint-1: #bfbfbf;--wp--preset--color--tint-2: #979797;--wp--preset--color--tint-3: #777777;--wp--preset--color--contrast-1: #4d4d4d;--wp--preset--color--contrast-2: #2d2d2d;--wp--preset--color--contrast-3: #131313;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 0.875rem;--wp--preset--font-size--medium: clamp(1.125rem, 1.125rem + ((1vw - 0.2rem) * 0.344), 1.4rem);--wp--preset--font-size--large: clamp(1.5rem, 1.5rem + ((1vw - 0.2rem) * 0.625), 2rem);--wp--preset--font-size--x-large: clamp(2.125rem, 2.125rem + ((1vw - 0.2rem) * 0.781), 2.75rem);--wp--preset--font-family--space-grotesk: 'Space Grotesk', sans-serif;--wp--preset--font-family--open-sans: 'Open Sans', sans-serif;--wp--preset--spacing--20: clamp(1rem, 1rem + 100vw / (1024 / (0.5 * 16)), 1.5rem);--wp--preset--spacing--30: clamp(1.5rem, 1.5rem + 100vw / (1024 / (0.5 * 16)), 2rem);--wp--preset--spacing--40: clamp(2rem, 2rem + 100vw / (1024 / (0.5 * 16)), 2.5rem);--wp--preset--spacing--50: clamp(2.5rem, 2.5rem + 100vw / (1024 / (1 * 16)), 3.5rem);--wp--preset--spacing--60: clamp(2.5rem, 2.5rem + 100vw / (1024 / (2 * 16)), 4.5rem);--wp--preset--spacing--70: clamp(3.5rem, 3.5rem + 100vw / (1024 / (3.75 * 16)), 6.5rem);--wp--preset--spacing--80: 5.06rem;--wp--preset--spacing--10: clamp(0.5rem, 0.5rem + 100vw / (992 / (0.5 * 16)), 1rem);--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:root { --wp--style--global--content-size: none;--wp--style--global--wide-size: none; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: ; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: ; }.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{background-color: #f8fafb;color: var(--wp--preset--color--contrast-2);font-family: var(--wp--preset--font-family--space-grotesk);line-height: 1.75;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-color: transparent;border-width: 2px;border-style: solid;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}:root :where(.wp-element-button:hover, .wp-block-button__link:hover){color: #ffffff;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-base-1-color{color: var(--wp--preset--color--base-1) !important;}.has-base-2-color{color: var(--wp--preset--color--base-2) !important;}.has-base-3-color{color: var(--wp--preset--color--base-3) !important;}.has-tint-1-color{color: var(--wp--preset--color--tint-1) !important;}.has-tint-2-color{color: var(--wp--preset--color--tint-2) !important;}.has-tint-3-color{color: var(--wp--preset--color--tint-3) !important;}.has-contrast-1-color{color: var(--wp--preset--color--contrast-1) !important;}.has-contrast-2-color{color: var(--wp--preset--color--contrast-2) !important;}.has-contrast-3-color{color: var(--wp--preset--color--contrast-3) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-base-1-background-color{background-color: var(--wp--preset--color--base-1) !important;}.has-base-2-background-color{background-color: var(--wp--preset--color--base-2) !important;}.has-base-3-background-color{background-color: var(--wp--preset--color--base-3) !important;}.has-tint-1-background-color{background-color: var(--wp--preset--color--tint-1) !important;}.has-tint-2-background-color{background-color: var(--wp--preset--color--tint-2) !important;}.has-tint-3-background-color{background-color: var(--wp--preset--color--tint-3) !important;}.has-contrast-1-background-color{background-color: var(--wp--preset--color--contrast-1) !important;}.has-contrast-2-background-color{background-color: var(--wp--preset--color--contrast-2) !important;}.has-contrast-3-background-color{background-color: var(--wp--preset--color--contrast-3) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-base-1-border-color{border-color: var(--wp--preset--color--base-1) !important;}.has-base-2-border-color{border-color: var(--wp--preset--color--base-2) !important;}.has-base-3-border-color{border-color: var(--wp--preset--color--base-3) !important;}.has-tint-1-border-color{border-color: var(--wp--preset--color--tint-1) !important;}.has-tint-2-border-color{border-color: var(--wp--preset--color--tint-2) !important;}.has-tint-3-border-color{border-color: var(--wp--preset--color--tint-3) !important;}.has-contrast-1-border-color{border-color: var(--wp--preset--color--contrast-1) !important;}.has-contrast-2-border-color{border-color: var(--wp--preset--color--contrast-2) !important;}.has-contrast-3-border-color{border-color: var(--wp--preset--color--contrast-3) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-space-grotesk-font-family{font-family: var(--wp--preset--font-family--space-grotesk) !important;}.has-open-sans-font-family{font-family: var(--wp--preset--font-family--open-sans) !important;}
+:root :where(.wp-block-button .wp-block-button__link){background-color: var(--wp--preset--color--primary);color: #ffffff;}
+:root :where(.wp-block-heading){color: var(--wp--preset--color--contrast-3);}
+:root :where(.wp-block-navigation){font-weight: 500;}
+:root :where(.wp-block-post-date a:where(:not(.wp-element-button))){text-decoration: none;}
+:root :where(.wp-block-post-date a:where(:not(.wp-element-button)):hover){text-decoration: underline;}
+:root :where(.wp-block-post-title){color: var(--wp--preset--color--contrast-3);}
+:root :where(.wp-block-post-title a:where(:not(.wp-element-button))){text-decoration: none;}
+:root :where(.wp-block-post-title a:where(:not(.wp-element-button)):hover){text-decoration: underline;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<style id="core-block-supports-inline-css">
+.wp-container-core-group-is-layout-f1189ed3{flex-wrap:nowrap;gap:var(--wp--preset--spacing--20);}.wp-container-core-navigation-is-layout-98cc8f4b{gap:var(--wp--preset--spacing--10);justify-content:center;}.wp-container-core-group-is-layout-6c531013{flex-wrap:nowrap;}.wp-elements-ce311198743d097fc19d5b0379fa95bd a:where(:not(.wp-element-button)){color:var(--wp--preset--color--tint-3);}.wp-container-core-group-is-layout-4dd827e2 > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width:500px;margin-left:0 !important;margin-right:auto !important;}.wp-container-core-group-is-layout-4dd827e2 > .alignwide{max-width:500px;}.wp-container-core-group-is-layout-4dd827e2 .alignfull{max-width:none;}.wp-container-core-buttons-is-layout-da267d74{gap:var(--wp--preset--spacing--30);}.wp-container-core-group-is-layout-e1411b87{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-7abde1fe{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-28f84493{flex-wrap:nowrap;}.wp-elements-f22f21c50be692bd1148bdcf618fdce6 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--primary);}.wp-container-core-group-is-layout-fc054d2d{flex-wrap:nowrap;gap:var(--wp--preset--spacing--30);}.wp-container-core-columns-is-layout-00ff1643{flex-wrap:nowrap;}.wp-container-core-group-is-layout-d964a143 > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width:100%;margin-left:auto !important;margin-right:auto !important;}.wp-container-core-group-is-layout-d964a143 > .alignwide{max-width:100%;}.wp-container-core-group-is-layout-d964a143 .alignfull{max-width:none;}.wp-container-core-group-is-layout-fe9cc265{flex-direction:column;align-items:flex-start;}.wp-elements-751ba8245112f320ff8072ad2a59697b a:where(:not(.wp-element-button)){color:var(--wp--preset--color--contrast-3);}.wp-elements-1653d3a8986c34e26de4afcec8a61342 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--contrast-3);}.wp-elements-215aedbb1e41d3bf36a5ae030602e29d a:where(:not(.wp-element-button)){color:var(--wp--preset--color--tint-1);}.wp-elements-13548853b0c4081375eddb4dc94b9265 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--tint-1);}.wp-container-core-group-is-layout-19e250f3 > *{margin-block-start:0;margin-block-end:0;}.wp-container-core-group-is-layout-19e250f3 > * + *{margin-block-start:0;margin-block-end:0;}.wp-container-core-group-is-layout-e0082cf6 > *{margin-block-start:0;margin-block-end:0;}.wp-container-core-group-is-layout-e0082cf6 > * + *{margin-block-start:var(--wp--preset--spacing--20);margin-block-end:0;}.wp-container-core-group-is-layout-cb46ffcb{flex-wrap:nowrap;justify-content:space-between;}.wp-container-core-group-is-layout-8a6ca754{gap:var(--wp--preset--spacing--30);flex-direction:column;align-items:flex-start;}.wp-elements-d12b56cc187ecf9c33c683e20bebaf8b a:where(:not(.wp-element-button)){color:var(--wp--preset--color--tint-2);}.wp-container-core-group-is-layout-f4c28e8b{flex-wrap:nowrap;gap:var(--wp--preset--spacing--10);justify-content:flex-end;}
+/*# sourceURL=core-block-supports-inline-css */
+</style>
+<style id="wp-block-template-skip-link-inline-css">
+
+
+
+		.skip-link.screen-reader-text {
+			border: 0;
+			clip-path: inset(50%);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute !important;
+			width: 1px;
+			word-wrap: normal !important;
+		}
+
+		.skip-link.screen-reader-text:focus {
+			background-color: #eee;
+			clip-path: none;
+			color: #444;
+			display: block;
+			font-size: 1em;
+			height: auto;
+			left: 5px;
+			line-height: normal;
+			padding: 15px 23px 14px;
+			text-decoration: none;
+			top: 5px;
+			width: auto;
+			z-index: 100000;
+		}
+/*# sourceURL=wp-block-template-skip-link-inline-css */
+</style>
+<script src="js/view.js" id="mora-core-animated-headline-view-script-js" defer="" data-wp-strategy="defer"></script>
+<script src="js/view_2.js" id="mora-core-project-box-view-script-js" defer="" data-wp-strategy="defer"></script>
+<script src="js/view_1.js" id="mora-core-slider-view-script-js" defer="" data-wp-strategy="defer"></script>
+<script src="js/jquery.min.js" id="jquery-core-js"></script>
+<script src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<script src="js/underscore.min.js" id="underscore-js"></script>
+<script src="js/backbone.min.js" id="backbone-js"></script>
+<script src="js/front-end-deps.js" id="nf-front-end-deps-js"></script>
+<script id="nf-front-end-js-extra">
+var nfi18n = {"ninjaForms":"Ninja Forms","changeEmailErrorMsg":"Please enter a valid email address!","changeDateErrorMsg":"Please enter a valid date!","confirmFieldErrorMsg":"These fields must match!","fieldNumberNumMinError":"Number Min Error","fieldNumberNumMaxError":"Number Max Error","fieldNumberIncrementBy":"Please increment by ","fieldTextareaRTEInsertLink":"Insert Link","fieldTextareaRTEInsertMedia":"Insert Media","fieldTextareaRTESelectAFile":"Select a file","formErrorsCorrectErrors":"Please correct errors before submitting this form.","formHoneypot":"If you are a human seeing this field, please leave it empty.","validateRequiredField":"This is a required field.","honeypotHoneypotError":"Honeypot Error","fileUploadOldCodeFileUploadInProgress":"File Upload in Progress.","fileUploadOldCodeFileUpload":"FILE UPLOAD","currencySymbol":"","fieldsMarkedRequired":"Fields marked with an \u003Cspan class=\"ninja-forms-req-symbol\"\u003E*\u003C/span\u003E are required","thousands_sep":",","decimal_point":".","siteLocale":"en_US","dateFormat":"m/d/Y","startOfWeek":"1","of":"of","previousMonth":"Previous Month","nextMonth":"Next Month","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"weekdaysMin":["Su","Mo","Tu","We","Th","Fr","Sa"],"recaptchaConsentMissing":"reCaptcha validation couldn't load.","recaptchaMissingCookie":"reCaptcha v3 validation couldn't load the cookie needed to submit the form.","recaptchaConsentEvent":"Accept reCaptcha cookies before sending the form."};
+var nfFrontEnd = {"adminAjax":"https://wpdemo.ajufbox.com/mora/wp-admin/admin-ajax.php","ajaxNonce":"34b7865bbb","requireBaseUrl":"https://wpdemo.ajufbox.com/mora/wp-content/plugins/ninja-forms/assets/js/","use_merge_tags":{"user":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","recaptcha_v3":"recaptcha_v3","repeater":"repeater","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"post":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","recaptcha_v3":"recaptcha_v3","repeater":"repeater","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"system":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","recaptcha_v3":"recaptcha_v3","repeater":"repeater","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"fields":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","recaptcha_v3":"recaptcha_v3","repeater":"repeater","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"calculations":{"html":"html","hidden":"hidden","note":"note","unknown":"unknown"}},"opinionated_styles":"light","filter_esc_status":"false","nf_consent_status_response":[]};
+var nfInlineVars = [];
+//# sourceURL=nf-front-end-js-extra
+</script>
+<script src="js/front-end.js" id="nf-front-end-js"></script>
+<link rel="https://api.w.org/" href="https://wpdemo.ajufbox.com/mora/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://wpdemo.ajufbox.com/mora/wp-json/wp/v2/pages/8"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://wpdemo.ajufbox.com/mora/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.9">
+<link rel="canonical" href="https://wpdemo.ajufbox.com/mora/">
+<link rel="shortlink" href="https://wpdemo.ajufbox.com/mora/">
+	<!-- Google tag (gtag.js) -->
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GDRQP4RVDT"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-GDRQP4RVDT');
+	</script>
+		<script type="importmap" id="wp-importmap">
+{"imports":{"@wordpress/interactivity":"https://wpdemo.ajufbox.com/mora/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=8964710565a1d258501f"}}
+</script>
+<link rel="modulepreload" href="https://wpdemo.ajufbox.com/mora/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=8964710565a1d258501f" id="@wordpress/interactivity-js-modulepreload" fetchpriority="low">
+<style class="wp-fonts-local">
+@font-face{font-family:"Space Grotesk";font-style:normal;font-weight:300;font-display:fallback;src:url('fonts/SpaceGrotesk-Light.ttf') format('truetype');font-stretch:normal;}
+@font-face{font-family:"Space Grotesk";font-style:normal;font-weight:400;font-display:fallback;src:url('fonts/SpaceGrotesk-Regular.ttf') format('truetype');font-stretch:normal;}
+@font-face{font-family:"Space Grotesk";font-style:normal;font-weight:500;font-display:fallback;src:url('fonts/SpaceGrotesk-Medium.ttf') format('truetype');font-stretch:normal;}
+@font-face{font-family:"Space Grotesk";font-style:normal;font-weight:600;font-display:fallback;src:url('fonts/SpaceGrotesk-SemiBold.ttf') format('truetype');font-stretch:normal;}
+@font-face{font-family:"Space Grotesk";font-style:normal;font-weight:700;font-display:fallback;src:url('fonts/SpaceGrotesk-Bold.ttf') format('truetype');font-stretch:normal;}
+</style>
+<link rel="icon" href="images/cropped-favicon-32x32.png" sizes="32x32">
+<link rel="icon" href="images/cropped-favicon-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="images/cropped-favicon-180x180.png">
+<meta name="msapplication-TileImage" content="https://wpdemo.ajufbox.com/mora/wp-content/uploads/2024/11/cropped-favicon-270x270.png">
+</head>
+
+<body class="home wp-singular page-template page-template-page-no-title page page-id-8 wp-custom-logo wp-embed-responsive wp-theme-mora">
+
+<div class="wp-site-blocks"><header class="wp-block-template-part">
+<div class="wp-block-group site-header sticky is-layout-flow wp-block-group-is-layout-flow">
+<div class="wp-block-group site-header-container container is-layout-flow wp-block-group-is-layout-flow">
+<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-f1189ed3 wp-block-group-is-layout-flex"><div class="wp-block-site-logo"><a href="index.html" class="custom-logo-link" rel="home" aria-current="page"><img width="120" height="42" src="images/logo.png" class="custom-logo" alt="Mora" decoding="async"></a></div></div>
+
+
+<nav style="text-transform:uppercase;" class="has-text-color has-contrast-3-color is-responsive items-justified-center site-menu wp-block-navigation is-horizontal is-content-justification-center is-layout-flex wp-container-core-navigation-is-layout-98cc8f4b wp-block-navigation-is-layout-flex" aria-label="Header navigation" data-wp-interactive="core/navigation" data-wp-context="{" overlayopenedby":{"click":false,"hover":false,"focus":false},"type":"overlay","roleattribute":"","arialabel":"menu"}"=""><button aria-haspopup="dialog" aria-label="Open menu" class="wp-block-navigation__responsive-container-open" data-wp-on--click="actions.openMenuOnClick" data-wp-on--keydown="actions.handleMenuKeydown"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 5v1.5h14V5H5z"></path><path d="M5 12.8h14v-1.5H5v1.5z"></path><path d="M5 19h14v-1.5H5V19z"></path></svg></button>
+				<div class="wp-block-navigation__responsive-container  has-background has-base-2-background-color" id="modal-1" data-wp-class--has-modal-open="state.isMenuOpen" data-wp-class--is-menu-open="state.isMenuOpen" data-wp-watch="callbacks.initMenu" data-wp-on--keydown="actions.handleMenuKeydown" data-wp-on--focusout="actions.handleMenuFocusout" tabindex="-1">
+					<div class="wp-block-navigation__responsive-close" tabindex="-1">
+						<div class="wp-block-navigation__responsive-dialog" data-wp-bind--aria-modal="state.ariaModal" data-wp-bind--aria-label="state.ariaLabel" data-wp-bind--role="state.roleAttribute">
+							<button aria-label="Close menu" class="wp-block-navigation__responsive-container-close" data-wp-on--click="actions.closeMenuOnClick"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="m13.06 12 6.47-6.47-1.06-1.06L12 10.94 5.53 4.47 4.47 5.53 10.94 12l-6.47 6.47 1.06 1.06L12 13.06l6.47 6.47 1.06-1.06L13.06 12Z"></path></svg></button>
+							<div class="wp-block-navigation__responsive-container-content" data-wp-watch="callbacks.focusFirstElement" id="modal-1-content">
+								<ul style="text-transform:uppercase;" class="wp-block-navigation__container has-text-color has-contrast-3-color is-responsive items-justified-center site-menu wp-block-navigation"><li class=" wp-block-navigation-item current-menu-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="index.html" aria-current="page"><span class="wp-block-navigation-item__label">Home</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="about/about.html"><span class="wp-block-navigation-item__label">About</span></a></li><li data-wp-context="{ " submenuopenedby":="" {="" "click":="" false,="" "hover":="" "focus":="" false="" },="" "type":="" "submenu",="" "modal":="" null,="" "previousfocus":="" null="" }"="" data-wp-interactive="core/navigation" data-wp-on--focusout="actions.handleMenuFocusout" data-wp-on--keydown="actions.handleMenuKeydown" data-wp-on--mouseenter="actions.openMenuOnHover" data-wp-on--mouseleave="actions.closeMenuOnHover" data-wp-watch="callbacks.initMenu" tabindex="-1" class="wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="sstourblog.github.io"><span class="wp-block-navigation-item__label">Blog</span></a><button data-wp-bind--aria-expanded="state.isMenuOpen" data-wp-on--click="actions.toggleMenuOnClick" aria-label="Blog submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul data-wp-on--focus="actions.openMenuOnFocus" class="wp-block-navigation__submenu-container has-background has-base-2-background-color wp-block-navigation-submenu"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="https://sstourblog.github.io/post.html?id=12"><span class="wp-block-navigation-item__label">Detail</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="https://sstourblog.github.io/post.html?id=1"><span class="wp-block-navigation-item__label">Detail with Sidebar</span></a></li></ul></li><li data-wp-context="{ " submenuopenedby":="" {="" "click":="" false,="" "hover":="" "focus":="" false="" },="" "type":="" "submenu",="" "modal":="" null,="" "previousfocus":="" null="" }"="" data-wp-interactive="core/navigation" data-wp-on--focusout="actions.handleMenuFocusout" data-wp-on--keydown="actions.handleMenuKeydown" data-wp-on--mouseenter="actions.openMenuOnHover" data-wp-on--mouseleave="actions.closeMenuOnHover" data-wp-watch="callbacks.initMenu" tabindex="-1" class="wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="portfolio/portfolio.html"><span class="wp-block-navigation-item__label">Portfolio</span></a><button data-wp-bind--aria-expanded="state.isMenuOpen" data-wp-on--click="actions.toggleMenuOnClick" aria-label="Portfolio submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul data-wp-on--focus="actions.openMenuOnFocus" class="wp-block-navigation__submenu-container has-background has-base-2-background-color wp-block-navigation-submenu"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="https://wpdemo.ajufbox.com/mora/portfolio/"><span class="wp-block-navigation-item__label">Portfolio List</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="https://wpdemo.ajufbox.com/mora/2024/10/24/designing-a-web-landing-page/"><span class="wp-block-navigation-item__label">Project Detail</span></a></li></ul></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="contact/contact.html"><span class="wp-block-navigation-item__label">Contact</span></a></li></ul>
+							</div>
+						</div>
+					</div>
+				</div></nav>
+
+
+<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-6c531013 wp-block-group-is-layout-flex align-items-lg-center d-lg-flex d-none">
+<div class="wp-block-button d-none d-lg-block" style="text-transform:uppercase"><a class="wp-block-button__link wp-element-button" style="padding-top:1rem;padding-right:2rem;padding-bottom:1rem;padding-left:2rem">
+          Hire Me <i class="fa fa-chevron-right ms-1 fs-sm"></i> </a></div>
+</div>
+</div>
+</div>
+</header>
+
+
+<main class="wp-block-group alignfull is-layout-constrained wp-block-group-is-layout-constrained">
+  <div class="entry-content wp-block-post-content is-layout-constrained wp-block-post-content-is-layout-constrained">
+<section id="home" class="wp-block-group has-text-color has-link-color is-layout-constrained wp-block-group-is-layout-constrained">
+<div style="height:var(--wp--preset--spacing--50)" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-group container is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-columns row is-layout-flex wp-container-core-columns-is-layout-7abde1fe wp-block-columns-is-layout-flex" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)">
+<div class="wp-block-column pb-lg-0 is-layout-flow wp-block-column-is-layout-flow col-lg-6 order-lg-2" style="padding-bottom:var(--wp--preset--spacing--60)">
+<div class="img-wrap is-style-circle-left wp-block-mora-core-image-wrap">
+	<div class="img-wrap-inner">
+		<div class="img-wrap-circle" data-aos="fade-left"></div>
+				<img decoding="async" src="images/profile-1.jpg" alt="" class="d-inline-block" data-aos="fade-up">
+			</div>
+</div></div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-6">
+<div data-aos-delay="100" data-aos="fade-up" style="--lg-font-size: 128px; --md-font-size: 112px; --xs-font-size: 80px;" class="wp-block-mora-core-stroke-heading-with-subtitle">
+
+<h1 class="stroke-heading-with-subtitle">
+
+<p class="subtitle">hello Im</p>
+
+<p class="stroke-text-bolder d-inline-block has-space-grotesk-font-family" style="font-style:normal;font-weight:900">Sanjay Yadav</p>
+</h1>
+
+</div>
+
+
+<div data-aos-delay="200" data-aos="fade-up" style="--font-size: 42px;" class="wp-block-mora-core-animated-headline">
+<h2 class="animated-headline">
+
+<p>I am a</p>
+
+<div style="--typed-text-color: #0A3981;" class="wp-block-mora-core-typed-text">
+	<div class="typed-text" data-type-speed="100" data-back-speed="10" data-back-delay="2000">
 		
-        <title>Resume - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-		<meta name="7searchppc" content="6d522c936b60a4aafae8ba769a248644"/>
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Sanjay Kumar Yadav</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#project">project</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+<p>Web Developer</p>
+<p>Backend Developer(fast Api/Flask)</p>
+<p>Cloud Developer</p>
+<p>System Design</p>
+<p>UI/UX Designer</p>
+		<div class="typed"></div>
+	</div>
+</div></h2>
+</div>
 
-                </ul>
-            </div>
-            <div class="d-flex align-items-end justify-content-between border-top">
-                <a href="assets/img/resume.pdf" class="btn w-50 ">Download CV</a>
-                <a href="#contact" class="btn w-50 "> Contact Me</a>
-            </div>
-        </nav>
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Sanjay Kumar
-                        <span class="text-primary">Yadav</span>
-                    </h1>
-                    <div class="subheading mb-5">
-                        144 kewata ka pura, sohansa, Jaunpur U.P,India 222204 · (638) 857-4919 ·
-                        <a href="sanjayyadav11210@gmail.com">sanjayyadav11210@gmail.com</a>
-                    </div>
-                    <p class="lead mb-5">Software Developer with 2+ years of experience preparing flawless presentations, assembling facility reports, and maintaining the Software Bugs and New Customers. I am quick learner and swiftly adoptable in different environment. Looking to leverage my knowledge and experience into a role as Software Engineer II..
-                    </p>
-                    <div class="social-icons">
-                        <a class="social-icon" href="https://in.linkedin.com/in/ersanjay19" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="https://github.com/sanjayengineer121" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" href="https://twitter.com/engineerstechy" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a class="social-icon" href="https://www.facebook.com/profile.php?id=100094422265856&mibextid=9R9pXO" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Experience-->
-            <section class="resume-section" id="experience">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Software Engineer</h3>
-                            <div class="subheading mb-3">ENSOWT</div>
-                            <p>
-                                ● Schedule and coordinate meetings, appointments, with new customers to show demo and installation.<br>
-                                ● Check the problems and inconvenience with software and find out solution that how to fix that issue.<br>
-                                ● Developed new features so that customers work improves and Find out Software Intigration in billing Software.<br>
-                                ● Develop mini tools similar to WhatsApp promotion and multiple billing supports.<br>
-                                ● Big role in UPI payment Link Development and Auto Update in WhatsApp Api Fetures and More.<br>
-                            </p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Nove 2021 - Present</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">PYTHON Trainer</h3>
-                            <div class="subheading mb-3">Slog Solutions Pvt Ltd</div>
-                            <p>
-                                ● Develop new content for New Students who is coming to attend training.<br>
-                                ● Arrange test timing and set paper for students.<br>
-                                ● Attend new institute to aware new technology, programming language which in demanding by any Industries and the level of programming language that industries demanding right now.<br>
-                                ● We are helping to reduce university/colleges vs Industries gap and we are ready to fill those gaps<br>
-                            </p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Oct 2021 - Nov 2021</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Junior Developer</h3>
-                            <div class="subheading mb-3">Lpu</div>
-                            <p>data encryption and decryption Linux Project use fro forensic report and hashing and decoding data</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">July 2018 - March 2020</span></div>
-                    </div>
-                    
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Education-->
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Bachelor of Technology</h3>
-                            <div class="subheading mb-3">Bachelor of Science</div>
-                            <div>Computer Science - Web Development & Cyber Security</div>
-                            <p>GPA: 6.01</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2016 - march 2021</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">S.I.C High School</h3>
-                            <div class="subheading mb-3">12<sup>th</sup> and 10<sup>th</sup></div>
-                            <p>1 <sup>st</sup> Division</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2012 - May 2014</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <Br>
 
-            <h2 class="mb-5">Services</h1><br>
-            <section class="resume-section" id="project">
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <div class="service-item">
-                                    <a href="UPI/create-link.html" target="_blank">
-                                        
-                                        <i class="fab fa-amazon-pay mx-auto mb-4"></i>
-                                    <h5 class="mb-2">Web UPI PAYMENT QR GENERATOR</h5></a>
-                                    <p class="mb-0">Digital modes of transactions are becoming increasingly popular not just because they are easy to use</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="service-item">
-                                    <a href="https://github.com/sanjayengineer121/Django-billing-software" target="_blank">
-                                        <i class="fab fa-accusoft mx-auto mb-4"></i>
-                                    <h5 class="mb-2">Django billing software</h5></a>
-                                    <p class="mb-0">An Django billing software is a tool or application designed to help individuals or businesses keep track of their spending. A beautiful software tracker typically features an intuitive and visually appealing interface that makes it easy for users to Handle all Finances</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="service-item">
-                                    <a href="https://loyalty-dashboard.onrender.com/" target="_blank">
-                                    <i class="fab fa-2x fa-android mx-auto mb-4"></i>
-                                    <h5 class="mb-2">Loyality Program</h5></a>
-                                    <p class="mb-0">Enduring Connection, Trustworthy Foundation, Personalized Experiences, Rewards and Coupons, Easy to maintain, Graph summary, custom report, Tiers and monthly target are main features of this WEB app.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="service-item">
-                                    <a href="https://github.com/sanjayengineer121/EnterpriseLoyality" target="_blank">
-                                    <i class="fab fa-2x fa-android mx-auto mb-4"></i>
-                                    <h5 class="mb-2">Loyality Desktop Application</h5></a>
-                                    <p class="mb-0">Loyalty programs, for retailers and other businesses, offer rewards, discounts, and other special incentives as a way to attract and retain customers.
-                                       
-                                    </p>
-                                </div>
-                            </div>
+<div data-aos-delay="400" data-aos="fade-up" class="wp-block-group is-content-justification-left is-layout-constrained wp-container-core-group-is-layout-4dd827e2 wp-block-group-is-layout-constrained">
+<p class="has-tint-3-color has-text-color has-link-color has-medium-font-size wp-elements-ce311198743d097fc19d5b0379fa95bd">
+	Backend Software Engineer with 3+ years of experience building scalable, secure, and high-performance applications using FastAPI, Flask, and Django. Proven expertise in REST API design, async processing, payment integrations, dashboards, and cloud deployments (AWS, Vercel). Delivered production systems serving 2,000+ users, reduced downtime by 35%, and automated workflows by 40%. Passionate about clean architecture, performance optimization, and building reliable backend systems.
+</p>
+</div>
 
-                            <div class="col-md-6">
-                                <div class="service-item">
-                                    <a href="https://github.com/sanjayengineer121/Daily_Ac_report" target="_blank">
-                                    <i class="fas fa-check-double mx-auto mb-4"></i>
-                                    <!-- <i class="fas fa-check-double"></i> -->
-                                    <h5 class="mb-2">Daily Finance maintaining Software (Desktop Version)</h5></a>
-                                    <p class="mb-0">Accounting software designed for small business owners and accountants. Available on any computer or mobile device with an internet connection. Business finances and cashflow are updated in real time. Imports transactions from bank accounts. Unlimited user logins. Integrates with over 1,000 3rd-party business applications. Supports multiple curr.</p>
-                                </div>
-                            </div>
 
-                            <div class="col-md-6">
-                                <div class="service-item">
-                                    <a href="https://expensetracker-ksjy.onrender.com/" target="_blank">
 
-                                    <i class="fa fa-2x fa-laptop-code mx-auto mb-4"></i>
-                                    <h5 class="mb-2">Expense Tracker (Cloud Version)</h5></a>
-                                    <p class="mb-0">An expense tracker is a tool or application designed to help individuals or businesses keep track of their spending. It allows users to record and categorize their expenses, providing insights into where their money is going. A beautiful expense tracker typically features an intuitive and visually appealing interface that makes it easy for users to Handle all Finances</p>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <div class="service-item">
-                                    <a href="https://ping-app.online/" target="_blank">
-                                    <i class="fa fa-2x fa-search mx-auto mb-4"></i>
-                                    <h5 class="mb-2">ENSOWT(PING Product Website)</h5></a>
-                                    <p class="mb-0">We at ENSOWT believe in the infinite possibilities that our society is capable of as a unit. Through our enabling services we allow the best of mankind to reveal itself and evolve under the right orientation.</p>
-                                </div>
-                            </div>
+<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-e1411b87 wp-block-group-is-layout-flex" style="margin-top:var(--wp--preset--spacing--30)">
+<div class="wp-block-buttons is-layout-flex wp-container-core-buttons-is-layout-da267d74 wp-block-buttons-is-layout-flex">
+<div data-aos="fade-right" class="wp-block-button" style="text-transform:uppercase"><a href="about/resume_4.pdf" target="_blank" class="wp-block-button__link wp-element-button" style="padding-top:1.25rem;padding-right:2.5rem;padding-bottom:1.25rem;padding-left:2.5rem" rel="">Download CV <i class="fa fa-download ms-2"></i></a></div>
 
-                            
-                            <div class="col-md-6">
-                                <div class="service-item">
-                                    <a href="https://github.com/sanjayengineer121/Ai_Generated_Card" target="_blank">
-                                    <i class="fa fa-2x fa-edit mx-auto mb-4"></i>
-                                    <h5 class="mb-2">Wedding Card Creating By GEN AI</h5></a>
-                                    <p class="mb-0">Generate your card in just one second <br>some sample was given kindly check</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="service-item">
-                                    <a href="https://github.com/sanjayengineer121/Grocery-management" target="_blank">
-                                        <i class="fas fa-cart-plus mx-auto mb-4"></i>
-                                    <h5 class="mb-2">Grocery management Project Web</h5></a>
-                                    <p class="mb-0">A grocery store can have multiple instances of the a product. There are classes representing clients and shopping baskets. The client is allowed to:
-                                        <br>Add an item (a piece of a product) into the basket.
-                                        <br>Remove an item from the basket
-                                        </p>
-                                </div>
-                            </div>
 
-                            
-                            <div class="col-md-6">
-                                <div class="service-item">
-                                    <a href="https://github.com/sanjayengineer121/Rest-Api-Practice" target="_blank">
-                                        <i class="fab fa-buffer mx-auto mb-4"></i>
-                                    <h5 class="mb-2">REST API HTTP Practice</h5></a>
-                                    <p class="mb-0">REST APIs enable the development of various web applications, supporting all CRUD (Create, Retrieve, Update, Delete) operations. Adhering to REST guidelines involves using specific HTTP methods for different server calls. The following information helps determine the suitable HTTP method for API actions.</p>
-                                </div>
-                            </div>
 
-                        </div>
-            </section>
+<div data-aos-delay="400" data-aos="fade-right" class="wp-block-button is-style-link-with-icon"><a data-fslightbox="" class="wp-block-button__link wp-element-button" href="" rel=""><i class="fa fa-play-circle" aria-hidden="true"></i> Watch Intro</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-            <hr class="m-0" />
-            <!-- Skills-->
-            <section class="resume-section" id="skills">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Skills</h2>
-                    <div class="subheading mb-3">Programming Languages & Tools</div>
-                    <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fa-brands fa-python"></i></li>
-                        <li class="list-inline-item"><i class="fa-solid fa-flask"></i></li>
-                        <img width="24" height="24" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/24/external-django-a-high-level-python-web-framework-that-encourages-rapid-development-logo-shadow-tal-revivo.png" alt="external-django-a-high-level-python-web-framework-that-encourages-rapid-development-logo-shadow-tal-revivo"/>  
-                        <li class="list-inline-item"><i class="fa-brands fa-linux"></i>   
-                        <li class="list-inline-item"><i class="fa-solid fa-database"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
-                        <li class="list-inline-item"><i class="fa-brands fa-aws"></i>
-                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>
-                        <li class="list-inline-item">Restful APIs</li>
-                        <li class="list-inline-item">Python GUI</li>
-                    </ul>
-                    <div class="subheading mb-3">Workflow</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Mobile-First, Responsive Design
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Browser Testing & Debugging
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Functional Teams
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Agile Development & Scrum
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Interests-->
-            <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Interests</h2>
-                    <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-                    <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Awards-->
-            <section class="resume-section" id="awards">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Awards & Certifications</h2>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            350 + Geeks for geeks DSA challenge solved in python <a href="https://www.geeksforgeeks.org/user/cybersecuritytutorials/" target="_blank">cybersecuritytutorials</a>
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Got first in class 12th examination.
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Scored O outstanding in major project in <a href="https://www.lpu.in/" target="_blank">LPU</a>
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            3
-                            <sup>rd</sup>
-                            Division in CEH Certification From Jetking Vasai
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            
-                           Recieved Python,Fundamental of business and international business , many more in University
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Division - in 12<sup>th</sup> and 10 <sup>th</sup> from State Board
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            top 500
-                            <sup>th</sup>
-                            Hack the box platform - Hackathon 2019 <a href="https://app.hackthebox.com/profile/overview" target="_blank">LPU</a> 
-                        </li>
-                    </ul>
-                </div>
-            </section>
 
-            <section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="contact">
-                <h2 class="mb-5">Contact Me</h2>
+
+<section id="service" class="wp-block-group position-relative is-layout-flow wp-block-group-is-layout-flow" style="border-bottom-color:var(--wp--preset--color--base-2);border-bottom-width:1px;padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+<div class="wp-block-group container position-relative is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-columns row is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-4">
+<h2 data-aos-duration="2000" data-aos="fade-right" class="wp-block-heading section-title heading-stroke has-medium-font-size">My Service</h2>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-8">
+<h2 data-aos="zoom-out-down" data-splitting="chars" class="wp-block-heading section-title has-medium-font-size splitting-char" style="text-transform:uppercase">transforming ideas
+			into seamless digital experiences</h2>
+</div>
+</div>
+
+
+
+<div style="height:var(--wp--preset--spacing--60)" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns row is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-4">
+<div class="wp-block-mora-core-service-box">
+
+<div class="wp-block-group service-box is-layout-flow wp-block-group-is-layout-flow">
+<div class="wp-block-group icon is-layout-flow wp-block-group-is-layout-flow">
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:48px;transform:rotate(0deg) scaleX(1) scaleY(1)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.5,1H4.5C2.019,1,0,3.019,0,5.5V14.5c0,2.481,2.019,4.5,4.5,4.5h7v3H7c-.276,0-.5,.224-.5,.5s.224,.5,.5,.5h10c.276,0,.5-.224,.5-.5s-.224-.5-.5-.5h-4.5v-3h7c2.481,0,4.5-2.019,4.5-4.5V5.5c0-2.481-2.019-4.5-4.5-4.5Zm3.5,13.5c0,1.93-1.57,3.5-3.5,3.5H4.5c-1.93,0-3.5-1.57-3.5-3.5V5.5c0-1.93,1.57-3.5,3.5-3.5h15c1.93,0,3.5,1.57,3.5,3.5V14.5Zm-4.732-6.266c.975,.975,.975,2.562,0,3.536l-3.083,3.083c-.098,.098-.226,.146-.354,.146s-.256-.049-.354-.146c-.195-.195-.195-.512,0-.707l3.083-3.083c.585-.585,.585-1.537,0-2.122l-3.088-3.088c-.195-.195-.195-.512,0-.707s.512-.195,.707,0l3.088,3.088Zm-11.828,.707c-.585,.585-.585,1.537,0,2.122l3.083,3.083c.195,.195,.195,.512,0,.707-.098,.098-.226,.146-.354,.146s-.256-.049-.354-.146l-3.083-3.083c-.975-.975-.975-2.562,0-3.536l3.088-3.088c.195-.195,.512-.195,.707,0s.195,.512,0,.707l-3.088,3.088Z"></path></svg></div></div>
+</div>
+
+
+
+<h3 class="wp-block-heading title">Web Development</h3>
+
+
+
+<div class="wp-block-group description is-layout-flow wp-block-group-is-layout-flow">
+<p>Creating and maintaining websites, involving tasks like coding, designing, and build functionality.
+						</p>
+</div>
+</div>
+
+</div></div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-4">
+<div class="wp-block-mora-core-service-box">
+
+<div class="wp-block-group service-box is-layout-flow wp-block-group-is-layout-flow">
+<div class="wp-block-group icon is-layout-flow wp-block-group-is-layout-flow">
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:48px;transform:rotate(0deg) scaleX(1) scaleY(1)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M348.8 32C340.7 46.1 336 62.5 336 80l0 16-272 0 0 224 272 0 0 64-272 0c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l284.8 0zM336 432c0 17.5 4.7 33.9 12.8 48L120 480c-13.3 0-24-10.7-24-24s10.7-24 24-24l216 0zM432 32l96 0c26.5 0 48 21.5 48 48l0 352c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48l0-352c0-26.5 21.5-48 48-48zm24 64c-13.3 0-24 10.7-24 24s10.7 24 24 24l48 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-48 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l48 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-48 0zm56 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg></div></div>
+</div>
+
+
+
+<h3 class="wp-block-heading title">Desktop App Development</h3>
+
+
+
+<div class="wp-block-group description is-layout-flow wp-block-group-is-layout-flow">
+<p>Creating and maintaining Desktop App, involving tasks like coding, designing, and build functionality.
+						</p>
+</div>
+</div>
+
+</div></div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-4">
+<div class="wp-block-mora-core-service-box">
+
+<div class="wp-block-group service-box is-layout-flow wp-block-group-is-layout-flow">
+<div class="wp-block-group icon is-layout-flow wp-block-group-is-layout-flow">
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:48px;transform:rotate(0deg) scaleX(1) scaleY(1)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 336c0 79.5 64.5 144 144 144l304 0c70.7 0 128-57.3 128-128 0-51.6-30.5-96.1-74.5-116.3 6.7-13.1 10.5-28 10.5-43.7 0-53-43-96-96-96-17.7 0-34.2 4.8-48.4 13.1-24.1-45.8-72.2-77.1-127.6-77.1-79.5 0-144 64.5-144 144 0 8 .7 15.9 1.9 23.5-56.9 19.2-97.9 73.1-97.9 136.5z"/></svg></div></div>
+</div>
+
+
+
+<h3 class="wp-block-heading title">System Design & AWS Cloud</h3>
+
+
+
+<div class="wp-block-group description is-layout-flow wp-block-group-is-layout-flow">
+<p>Designed scalable system architectures and deployed cloud services using AWS.<br>
+
+Built reliable, secure, and high-performance systems leveraging AWS cloud infrastructure.
+						</p>
+</div>
+</div>
+
+</div></div>
+</div>
+</div>
+</section>
+
+
+
+<section id="about" class="wp-block-group position-relative is-layout-flow wp-block-group-is-layout-flow" style="border-bottom-color:var(--wp--preset--color--base-2);border-bottom-width:1px;padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+<div class="wp-block-group container is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-columns row is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-4">
+<h2 data-aos-delay="1000" data-aos="fade-right" class="wp-block-heading section-title heading-stroke has-medium-font-size">About Me</h2>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-8">
+<h2 data-aos="zoom-out-down" data-splitting="chars" class="wp-block-heading section-title has-medium-font-size splitting-char" style="text-transform:uppercase">creating
+			digital experiences</h2>
+</div>
+</div>
+
+
+
+<div style="height:var(--wp--preset--spacing--50)" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns row is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column pb-lg-0 is-layout-flow wp-block-column-is-layout-flow col-lg-5" style="padding-bottom:var(--wp--preset--spacing--50)">
+<div class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="img-wrap wp-block-mora-core-image-wrap">
+	<div class="img-wrap-inner">
+		<div class="img-wrap-circle" data-aos="fade-left"></div>
+				<img decoding="async" src="images/profile-1.jpg" alt="" class="d-inline-block" data-aos="fade-up">
+			</div>
+</div></div>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-6 offset-lg-1 align-items-lg-center d-flex">
+<div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-fe9cc265 wp-block-group-is-layout-flex">
+<p data-aos="zoom-out" class="has-medium-font-size" style="margin-bottom:var(--wp--preset--spacing--10)">Hi there! Im Sanjay Yadav,
+						a passionate Python Developer & System Design based in the Uttar Pradesh state of India. With a love for all things design and
+						technology, I specialize in crafting stunning websites that not only look great but also function
+						seamlessly.
+					</p>
+
+
+
+<div class="wp-block-columns row is-layout-flex wp-container-core-columns-is-layout-00ff1643 wp-block-columns-is-layout-flex" style="margin-bottom:var(--wp--preset--spacing--20)">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-md-6" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)">
+<div data-aos="fade-up" class="wp-block-group feature-list is-nowrap is-layout-flex wp-container-core-group-is-layout-fc054d2d wp-block-group-is-layout-flex">
+<div class="wp-block-group feature-list-icon has-primary-color has-text-color has-background has-link-color wp-elements-f22f21c50be692bd1148bdcf618fdce6 is-layout-constrained wp-block-group-is-layout-constrained" style="background-color:#ffffff">
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:24px;transform:rotate(0deg) scaleX(1) scaleY(1)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path></svg></div></div>
+</div>
+
+
+
+<p class="feature-list-text">Holistic Approach</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-md-6" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)">
+<div data-aos-delay="200" data-aos="fade-up" class="wp-block-group feature-list is-nowrap is-layout-flex wp-container-core-group-is-layout-fc054d2d wp-block-group-is-layout-flex">
+<div class="wp-block-group feature-list-icon has-primary-color has-text-color has-background has-link-color wp-elements-f22f21c50be692bd1148bdcf618fdce6 is-layout-constrained wp-block-group-is-layout-constrained" style="background-color:#ffffff">
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:24px;transform:rotate(0deg) scaleX(1) scaleY(1)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path></svg></div></div>
+</div>
+
+
+
+<p class="feature-list-text">Proven Track Record</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-md-6" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)">
+<div data-aos-delay="200" data-aos="fade-up" class="wp-block-group feature-list is-nowrap is-layout-flex wp-container-core-group-is-layout-fc054d2d wp-block-group-is-layout-flex">
+<div class="wp-block-group feature-list-icon has-primary-color has-text-color has-background is-layout-constrained wp-block-group-is-layout-constrained" style="background-color:#ffffff">
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:24px;transform:rotate(0deg) scaleX(1) scaleY(1)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path></svg></div></div>
+</div>
+
+
+
+<p class="feature-list-text">Attention to Detail</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-md-6" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)">
+<div data-aos-delay="400" data-aos="fade-up" class="wp-block-group feature-list is-nowrap is-layout-flex wp-container-core-group-is-layout-fc054d2d wp-block-group-is-layout-flex">
+<div class="wp-block-group feature-list-icon has-primary-color has-text-color has-background has-link-color wp-elements-f22f21c50be692bd1148bdcf618fdce6 is-layout-constrained wp-block-group-is-layout-constrained" style="background-color:#ffffff">
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:24px;transform:rotate(0deg) scaleX(1) scaleY(1)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"></path></svg></div></div>
+</div>
+
+
+
+<p class="feature-list-text">Good Communication</p>
+</div>
+</div>
+</div>
+
+
+
+<div data-aos-delay="600" data-aos="fade-right" class="wp-block-group is-layout-constrained wp-container-core-group-is-layout-d964a143 wp-block-group-is-layout-constrained" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:0">
+<div class="wp-block-button" style="text-transform:uppercase"><a href="about/resume_4.pdf" class="wp-block-button__link wp-element-button" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--30)">
+		Resume </a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<div class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained" style="margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--40)"><div style="--marquee-duration: 80s;--marquee-text-color: #ffffff;" class="wp-block-mora-core-marquee-text">
+<div class="marquee-text">
+	<div class="marquee-text-track 
+	is-paused-on-hover	">
+		<div class="marquee-text-content">
+		
+<p style="font-weight:900;text-transform:uppercase">Web Developer</p>
+
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:86px;transform:rotate(0deg) scaleX(1) scaleY(1)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path class="cls-1" d="M900,4206h0c-7.653,0-15,7.5-15,15,0,0-.467,2-0.489,2-0.007,0-.492-2-0.511-2h0c0-7.5-7.347-15-15-15h0c-0.01,0-2-.49-2-0.5s1.994-.5,2-0.5h0c7.653,0,15-7.5,15-15,0-.01-0.025,0,0,0s0.5-2,.474-2c0,0,.526,2,0.526,2,0,7.5,7.347,15,15,15h0c0.009,0,2.011.51,2,.5C901.981,4205.48,900.009,4206,900,4206Z" transform="translate(-867 -4188)"></path></svg></div></div>
+
+<p class="stroke-text-bolder" style="font-weight:900;text-transform:uppercase">Designer</p>
+
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:86px;transform:rotate(0deg) scaleX(1) scaleY(1)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path class="cls-1" d="M900,4206h0c-7.653,0-15,7.5-15,15,0,0-.467,2-0.489,2-0.007,0-.492-2-0.511-2h0c0-7.5-7.347-15-15-15h0c-0.01,0-2-.49-2-0.5s1.994-.5,2-0.5h0c7.653,0,15-7.5,15-15,0-.01-0.025,0,0,0s0.5-2,.474-2c0,0,.526,2,0.526,2,0,7.5,7.347,15,15,15h0c0.009,0,2.011.51,2,.5C901.981,4205.48,900.009,4206,900,4206Z" transform="translate(-867 -4188)"></path></svg></div></div>
+
+<p style="font-weight:900;text-transform:uppercase">Web Developer</p>
+
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:86px;transform:rotate(0deg) scaleX(1) scaleY(1)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path class="cls-1" d="M900,4206h0c-7.653,0-15,7.5-15,15,0,0-.467,2-0.489,2-0.007,0-.492-2-0.511-2h0c0-7.5-7.347-15-15-15h0c-0.01,0-2-.49-2-0.5s1.994-.5,2-0.5h0c7.653,0,15-7.5,15-15,0-.01-0.025,0,0,0s0.5-2,.474-2c0,0,.526,2,0.526,2,0,7.5,7.347,15,15,15h0c0.009,0,2.011.51,2,.5C901.981,4205.48,900.009,4206,900,4206Z" transform="translate(-867 -4188)"></path></svg></div></div>
+
+<p class="stroke-text-bolder" style="font-weight:900;text-transform:uppercase">Designer</p>
+
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:86px;transform:rotate(0deg) scaleX(1) scaleY(1)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path class="cls-1" d="M900,4206h0c-7.653,0-15,7.5-15,15,0,0-.467,2-0.489,2-0.007,0-.492-2-0.511-2h0c0-7.5-7.347-15-15-15h0c-0.01,0-2-.49-2-0.5s1.994-.5,2-0.5h0c7.653,0,15-7.5,15-15,0-.01-0.025,0,0,0s0.5-2,.474-2c0,0,.526,2,0.526,2,0,7.5,7.347,15,15,15h0c0.009,0,2.011.51,2,.5C901.981,4205.48,900.009,4206,900,4206Z" transform="translate(-867 -4188)"></path></svg></div></div>
+
+<p style="font-weight:900;text-transform:uppercase">Web Developer</p>
+
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:86px;transform:rotate(0deg) scaleX(1) scaleY(1)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path class="cls-1" d="M900,4206h0c-7.653,0-15,7.5-15,15,0,0-.467,2-0.489,2-0.007,0-.492-2-0.511-2h0c0-7.5-7.347-15-15-15h0c-0.01,0-2-.49-2-0.5s1.994-.5,2-0.5h0c7.653,0,15-7.5,15-15,0-.01-0.025,0,0,0s0.5-2,.474-2c0,0,.526,2,0.526,2,0,7.5,7.347,15,15,15h0c0.009,0,2.011.51,2,.5C901.981,4205.48,900.009,4206,900,4206Z" transform="translate(-867 -4188)"></path></svg></div></div>
+
+<p class="stroke-text-bolder" style="font-weight:900;text-transform:uppercase">Designer</p>
+
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:86px;transform:rotate(0deg) scaleX(1) scaleY(1)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path class="cls-1" d="M900,4206h0c-7.653,0-15,7.5-15,15,0,0-.467,2-0.489,2-0.007,0-.492-2-0.511-2h0c0-7.5-7.347-15-15-15h0c-0.01,0-2-.49-2-0.5s1.994-.5,2-0.5h0c7.653,0,15-7.5,15-15,0-.01-0.025,0,0,0s0.5-2,.474-2c0,0,.526,2,0.526,2,0,7.5,7.347,15,15,15h0c0.009,0,2.011.51,2,.5C901.981,4205.48,900.009,4206,900,4206Z" transform="translate(-867 -4188)"></path></svg></div></div>
+
+<p style="font-weight:900;text-transform:uppercase">Web Developer</p>
+
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:86px;transform:rotate(0deg) scaleX(1) scaleY(1)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path class="cls-1" d="M900,4206h0c-7.653,0-15,7.5-15,15,0,0-.467,2-0.489,2-0.007,0-.492-2-0.511-2h0c0-7.5-7.347-15-15-15h0c-0.01,0-2-.49-2-0.5s1.994-.5,2-0.5h0c7.653,0,15-7.5,15-15,0-.01-0.025,0,0,0s0.5-2,.474-2c0,0,.526,2,0.526,2,0,7.5,7.347,15,15,15h0c0.009,0,2.011.51,2,.5C901.981,4205.48,900.009,4206,900,4206Z" transform="translate(-867 -4188)"></path></svg></div></div>
+
+<p class="stroke-text-bolder" style="font-weight:900;text-transform:uppercase">Designer</p>
+
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:86px;transform:rotate(0deg) scaleX(1) scaleY(1)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path class="cls-1" d="M900,4206h0c-7.653,0-15,7.5-15,15,0,0-.467,2-0.489,2-0.007,0-.492-2-0.511-2h0c0-7.5-7.347-15-15-15h0c-0.01,0-2-.49-2-0.5s1.994-.5,2-0.5h0c7.653,0,15-7.5,15-15,0-.01-0.025,0,0,0s0.5-2,.474-2c0,0,.526,2,0.526,2,0,7.5,7.347,15,15,15h0c0.009,0,2.011.51,2,.5C901.981,4205.48,900.009,4206,900,4206Z" transform="translate(-867 -4188)"></path></svg></div></div>
+
+<p style="font-weight:900;text-transform:uppercase">Web Developer</p>
+
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:86px;transform:rotate(0deg) scaleX(1) scaleY(1)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path class="cls-1" d="M900,4206h0c-7.653,0-15,7.5-15,15,0,0-.467,2-0.489,2-0.007,0-.492-2-0.511-2h0c0-7.5-7.347-15-15-15h0c-0.01,0-2-.49-2-0.5s1.994-.5,2-0.5h0c7.653,0,15-7.5,15-15,0-.01-0.025,0,0,0s0.5-2,.474-2c0,0,.526,2,0.526,2,0,7.5,7.347,15,15,15h0c0.009,0,2.011.51,2,.5C901.981,4205.48,900.009,4206,900,4206Z" transform="translate(-867 -4188)"></path></svg></div></div>
+
+<p class="stroke-text-bolder" style="font-weight:900;text-transform:uppercase">Designer</p>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+
+
+<section id="resume" class="wp-block-group position-relative is-layout-constrained wp-block-group-is-layout-constrained" style="border-bottom-color:var(--wp--preset--color--base-2);border-bottom-width:1px;padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+<div class="wp-block-group container position-relative is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-columns row is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-8 offset-lg-3">
+<div style="--lg-font-size: 108px; --md-font-size: 72px; --xs-font-size: 48px; line-height:1;" class="wp-block-mora-core-multiline-heading">
+<h4 class="multiline-heading">
+
+<p data-aos="slide-right" class="line-left has-contrast-3-color has-text-color has-link-color wp-elements-751ba8245112f320ff8072ad2a59697b" style="text-transform:uppercase">
+						My Education</p>
+
+<div style="height:0px" aria-hidden="true" class="wp-block-spacer"></div>
+
+<p data-aos-delay="1000" data-aos="fade-up" class="has-contrast-3-color has-text-color has-link-color wp-elements-1653d3a8986c34e26de4afcec8a61342" style="text-transform:uppercase">and </p>
+
+<p data-aos-delay="1000" data-aos="fade-up" class="has-tint-1-color has-text-color has-link-color wp-elements-215aedbb1e41d3bf36a5ae030602e29d" style="text-transform:uppercase">work</p>
+
+<div style="height:0px" aria-hidden="true" class="wp-block-spacer"></div>
+
+<p data-aos-delay="1550" data-aos="slide-left" class="line-right has-tint-1-color has-text-color has-link-color wp-elements-13548853b0c4081375eddb4dc94b9265" style="text-transform:uppercase">
+						Experience</p>
+</h4>
+
+</div></div>
+</div>
+
+
+
+<div style="height:var(--wp--preset--spacing--50)" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-group is-layout-constrained wp-container-core-group-is-layout-19e250f3 wp-block-group-is-layout-constrained col-lg-8 offset-lg-2">
+<div class="wp-block-mora-core-work-experience">
+
+<div class="wp-block-group experience-item row row-cols-lg-2 is-layout-flow wp-block-group-is-layout-flow" style="padding-bottom:var(--wp--preset--spacing--40)">
+<div style="height:105%" aria-hidden="true" class="wp-block-spacer experience-item-line"></div>
+
+
+
+<div data-aos="fade-right" class="wp-block-group is-layout-flow wp-block-group-is-layout-flow text-lg-end">
+<div class="wp-block-group experience-item__icon d-inline-flex is-layout-flow wp-block-group-is-layout-flow">
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:100px;transform:rotate(0deg) scaleX(1) scaleY(1)">
+	<img src="images/logo.gif" width="200px">
+
+</div></div>
+</div>
+
+
+
+<p class="experience-item__org">ESNOWT</p>
+
+
+
+<p class="experience-item__duration">Nov 2021 – Present</p>
+</div>
+
+
+
+<div data-aos-delay="200" data-aos="fade-right" class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
+<p class="experience-item__title">Software Engineer</p>
+
+
+
+<p class="experience-item__desc">
+* Led client demos, onboarding, and installations while resolving critical software issues.<br>
+* Enhanced billing software through new features, integrations, and automation tools.<br>
+* Contributed significantly to UPI payment links and WhatsApp API auto-update systems.
+</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="wp-block-mora-core-work-experience">
+
+<div class="wp-block-group experience-item row row-cols-lg-2 is-layout-flow wp-block-group-is-layout-flow" style="padding-bottom:var(--wp--preset--spacing--40)">
+<div style="height:105%" aria-hidden="true" class="wp-block-spacer experience-item-line"></div>
+
+
+
+<div data-aos-delay="200" data-aos="fade-right" class="wp-block-group is-layout-flow wp-block-group-is-layout-flow text-lg-start order-lg-2">
+<div class="wp-block-group experience-item__icon d-inline-flex is-layout-flow wp-block-group-is-layout-flow">
+<div class="wp-block-outermost-icon-block">
+	<div class="icon-container" style="width:100px;transform:rotate(0deg) scaleX(1) scaleY(1)">
+	<img src="images/1648381309151.jpg" width="100px">
+	</div></div>
+</div>
+
+
+
+<p class="experience-item__org">Slog Solutions Pvt Ltd
+</p>
+
+
+
+<p class="experience-item__duration">OCT 2021 – Nov 2021</p>
+</div>
+
+<div data-aos-delay="0" data-aos="fade-right" class="wp-block-group is-layout-flow wp-block-group-is-layout-flow text-lg-end">
+<p class="experience-item__title">PYTHON Trainer
+</p>
+
+
+
+<p class="experience-item__desc">
+* Created industry-focused training material for new students.<br>
+* Organized assessments and performance evaluations.<br>
+* Promoted in-demand technologies across academic institutions.<br>
+* Actively bridged the gap between academic learning and industry needs.	
+</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="wp-block-mora-core-work-experience">
+
+<div class="wp-block-group experience-item row row-cols-lg-2 is-layout-flow wp-block-group-is-layout-flow" style="padding-bottom:var(--wp--preset--spacing--40)">
+<div style="height:105%" aria-hidden="true" class="wp-block-spacer experience-item-line"></div>
+
+
+
+<div data-aos-delay="0" data-aos="fade-right" class="wp-block-group is-layout-flow wp-block-group-is-layout-flow text-lg-end">
+<div class="wp-block-group experience-item__icon d-inline-flex is-layout-flow wp-block-group-is-layout-flow">
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:100px;transform:rotate(0deg) scaleX(1) scaleY(1)">
+	<img src="images/logo.svg">
+
+</div></div>
+</div>
+
+
+
+<p class="experience-item__org">LPU</p>
+
+
+
+<p class="experience-item__duration">March 2019 – May 2020</p>
+</div>
+
+
+
+<div data-aos-delay="200" data-aos="fade-right" class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
+<p class="experience-item__title">Junior Developer
+</p>
+
+
+
+<p class="experience-item__desc">
+* Built a Linux forensic project for **encryption, decryption, hashing, and data decoding** using Python.<br>
+* Ensured forensic data integrity through cryptographic hashing and automated verification.<br>
+* Applied Linux security and forensic tools to support digital investigations.	
+</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="wp-block-mora-core-work-experience">
+
+<div class="wp-block-group experience-item row row-cols-lg-2 is-layout-flow wp-block-group-is-layout-flow" style="padding-bottom:var(--wp--preset--spacing--40)">
+<div style="height:105%" aria-hidden="true" class="wp-block-spacer experience-item-line"></div>
+
+
+
+<div data-aos-delay="200" data-aos="fade-right" class="wp-block-group is-layout-flow wp-block-group-is-layout-flow text-lg-start order-lg-2">
+<div class="wp-block-group experience-item__icon d-inline-flex is-layout-flow wp-block-group-is-layout-flow">
+<div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:100px;transform:rotate(0deg) scaleX(1) scaleY(1)">
+	<img src="images/logo.svg">
+</div></div>
+</div>
+
+
+
+<p class="experience-item__org">University</p>
+
+
+
+<p class="experience-item__duration">March 2016 – March 2019</p>
+</div>
+
+
+
+<div data-aos-delay="0" data-aos="fade-right" class="wp-block-group is-layout-flow wp-block-group-is-layout-flow text-lg-end">
+<p class="experience-item__title">Cyber Security & Technology</p>
+
+
+
+<p class="experience-item__desc">
+* Built security-focused tools to ensure **confidentiality, integrity, and authenticity** of digital evidence.<br>
+* Applied forensic methodologies to analyze, validate, and secure sensitive data.<br>
+* Proactively works to reduce attack surfaces and strengthen system defenses.
+
+					</p>
+</div>
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+<div style="height:63px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<section class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-group container is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-columns row is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-5">
+<h2 data-aos-duration="1500" data-aos="zoom-out-down" data-splitting="chars" class="wp-block-heading section-title stroke-text-bolder text-lg-end splitting-char" style="font-size:clamp(4.846rem, 4.846rem + ((1vw - 0.2rem) * 7.693), 11rem);">My Skill</h2>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-5 offset-lg-1">
+<div class="wp-block-group is-layout-constrained wp-container-core-group-is-layout-e0082cf6 wp-block-group-is-layout-constrained">
+<div data-aos="none" class="wp-block-mora-core-skill-counter">
+<div class="skill-progress-item">
+		<h6 class="title">Programming Language- </h6>
+		
+
+			<div class="d-flex flex-wrap gap-3 p-4 bg-light rounded justify-content-center">
+
+			<button class="tech-btn python">🐍 Python</button>
+			<button class="tech-btn js">⚡ JavaScript</button>
+			<button class="tech-btn bash">🖥 Bash</button>
+			<button class="tech-btn html">🌐 HTML</button>
+			<button class="tech-btn css">🎨 CSS</button>
+			<button class="tech-btn go">🚀 Go</button>
+
+			</div>
+
+		</div>
+</div>
+
+
+
+
+
+<div class="wp-block-mora-core-skill-counter">
+<div class="skill-progress-item">
+		<h6 class="title">Frameworks
+</h6>
+		<div class="d-flex flex-wrap gap-3 p-4 bg-light rounded justify-content-center">
+
+			<button class="fw-btn fastapi">⚡ FastAPI</button>
+			<button class="fw-btn flask">🔥 Flask</button>
+			<button class="fw-btn django">🟢 Django</button>
+			<button class="fw-btn ctk">🎨 CustomTkinter</button>
+			<button class="fw-btn tk">🪟 Tkinter</button>
+
+			</div>
+		</div>
+</div>
+
+<div class="wp-block-mora-core-skill-counter">
+<div class="skill-progress-item">
+
+		<h6 class="title">Frontend</h6>
+		<div class="d-flex flex-wrap gap-3 p-4 bg-light rounded justify-content-center">
+
+			<button class="ui-btn html">🌐 HTML</button>
+			<button class="ui-btn css">🎨 CSS</button>
+			<button class="ui-btn bootstrap">🅱 Bootstrap</button>
+			<button class="ui-btn js">⚡ JavaScript</button>
+			<button class="ui-btn ctk">🎨 CustomTkinter</button>
+			<button class="ui-btn tk">🪟 Tkinter</button>
+
+			</div>
+		</div>
+</div>
+
+<div class="wp-block-mora-core-skill-counter">
+  <div class="skill-progress-item">
+
+    <h6 class="title">Tools</h6>
+
+		<div class="d-flex flex-wrap gap-3 p-4 bg-light rounded justify-content-center">
+
+      <button class="tool-square wide vercel">
+        ▲ Vercel · 🚀 Render · 🐍 PythonAnywhere · 📊 Plotly
+      </button>
+      <button class="tool-square github">🐙 GitHub</button>
+      <button class="tool-square aws">☁ AWS</button>
+      <button class="tool-square shell">💻 Shell Scripting</button>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="wp-block-mora-core-skill-counter">
+<div class="skill-progress-item">
+		<h6 class="title">Database</h6>
+		<div class="d-flex flex-wrap gap-3 p-4 bg-light rounded justify-content-center">
+
+			<button class="ui-btn bootstrap">🗄 SQLite</button>
+			<button class="ui-btn">🐬 MySQL</button>
+			<button class="ui-btn ctk">🍃 MongoDB</button>
+			<button class="ui-btn tk">🪟 Tkinter</button>
+			<button class="ui-btn tk">⚡ JSON</button>
+			</div>
+		</div>
+		</div>
+</div></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+
+<section id="portfolio" class="wp-block-group position-relative is-layout-constrained wp-block-group-is-layout-constrained" style="border-bottom-color:var(--wp--preset--color--base-2);border-bottom-width:1px;padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+<div class="wp-block-group container is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-columns row is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-4">
+<h2 data-aos-delay="1000" data-aos="fade-right" class="wp-block-heading section-title heading-stroke has-medium-font-size">Portfolio</h2>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-8">
+<h2 data-aos="zoom-out-down" data-splitting="chars" class="wp-block-heading section-title has-medium-font-size splitting-char" style="text-transform:uppercase">blending
+			innovative design with functionality</h2>
+</div>
+</div>
+
+
+
+<div style="height:var(--wp--preset--spacing--40)" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+
+
+<div class="wp-block-columns row portfolio-layout-1 is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column mt-lg-5 is-layout-flow wp-block-column-is-layout-flow col-lg-4" style="padding-bottom:var(--wp--preset--spacing--30)"><div class="wp-block-mora-core-project-box">
+	<div class="project-box">
+		<div class="project-box-container " data-aos="scalexIn" data-aos-duration="1000">
+			<a href="https://sstourblog.github.io" target="_blank">
+				<img src="images/sstour.gif" alt="" data-aos="fade-in" data-aos-delay="1200">
+				<div class="content-overlay">
+					<div>
+						<div class="project-title">SSTOURBLOG</div>
+					</div>
+				</div>
+				<div class="project-description">
+					SSTOURBLOG is a <b>visual storytelling travel blog</b> showcasing the beauty and diversity of destinations around the world. It features high-quality travel photography, videography, and inspiring stories that invite readers to explore and experience cultures, landscapes, and adventures from every corner of the planet. The blog also offers regular updates, tips, and captivating content for travel enthusiasts, with options to subscribe and join the journey through featured posts and social media.
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-4" style="padding-bottom:var(--wp--preset--spacing--30)"><div class="wp-block-mora-core-project-box">
+	<div class="project-box">
+		<div class="project-box-container " data-aos="scalexIn" data-aos-duration="1000">
+			<a href="https://github.com/sanjayengineer121/Daily_Ac_report" target="_blank">
+				<img src="images/ezgif.com-animated-gif-maker.gif" alt="" data-aos="fade-in" data-aos-delay="1200">
+				<div class="content-overlay">
+					<div>
+						<div class="project-title">Enhanced Billing Software</div>
 						
-                                <div class="col-12">
-                                    <a href="https://api.whatsapp.com/send?phone=916388574919&text=Hello"><button class="btn btn-primary w-50 py-3" type="submit">Contact Through Whatsapp</button></a>
-                                </div>
-                                <div class="col-12">
-                                    <a href="mailto:sanjayyadav11210@gmail.com?subject=Hello Sanjay"><button class="btn btn-primary w-50 py-3" type="submit">Contact Through Mail</button></a>
-                                </div>
-                            </div>
-                        </form>
-            </section>
+					</div>
+				</div>
+				<div>
+					🔹 Developed a <b>modern accounting and billing application</b>> to simplify daily financial reporting and business tracking.<br>
+					🔹 Designed an <b>interactive dashboard</b> to monitor sales, payments, expenses, and revenue in real time.<br>
+					🔹 Implemented <b>automated report generation</b>, reducing manual accounting effort and errors.<br>
+					🔹 Optimized backend logic for <b>fast data processing and smooth performance</b>.<br>
+					🔹 Built a <b>clean, user-friendly UI</b> focused on clarity, accuracy, and ease of use for business users.<br>
+					🔹 Enabled structured data handling to support <b>scalability and future feature expansion</b>.<br>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+</div>
 
-            <p class="m-0">&copy; All Rights Reserved. Designed by <a href="https://in.linkedin.com/in/ersanjay19">Sanjay Yadav</a></p>
 
+
+<div class="wp-block-column mt-lg-5 is-layout-flow wp-block-column-is-layout-flow col-lg-4" style="padding-bottom:var(--wp--preset--spacing--30)"><div class="wp-block-mora-core-project-box">
+	<div class="project-box">
+		<div class="project-box-container " data-aos="scalexIn" data-aos-duration="1000">
+			<a href="https://github.com/sanjayengineer121/backenmd_app-sundarikanya" target="_blank">
+				<img src="images/dashboard-maker.gif" alt="" data-aos="fade-in" data-aos-delay="1200">
+				<div class="content-overlay">
+					<div>
+						<div class="project-title">backenmd_app-sundarikanya</div>
+						
+					</div>
+				</div>
+				<div>
+					🔹 Built using <b>FastAPI and Jinja2 templates</b> for efficient server-side rendering and dynamic content delivery.<br>
+					🔹 Implemented <b>>user authentication and session management</b> to ensure secure access and user state handling.<br>
+					🔹 Designed <b>asynchronous processing</b> to improve responsiveness and performance.<br>
+					🔹 Utilized <b>JSON-based data handling</b> for managing user accounts, sessions, and application content.<br>
+					🔹 Deployed with <b>custom Vercel configuration</b> for combined backend API and frontend hosting.<br>
+					🔹FastAPI, Python, Jinja2, JSON, Async Programming, REST APIs,User Authentication, Session Management, Vercel Deployment
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+<div class="wp-block-column mt-lg-5 is-layout-flow wp-block-column-is-layout-flow col-lg-4" style="padding-bottom:var(--wp--preset--spacing--30)"><div class="wp-block-mora-core-project-box">
+	
+
+
+<div class="project-box">
+		<div class="project-box-container " data-aos="scalexIn" data-aos-duration="1000">
+			<a href="https://sanjayengineer121.github.io/UPI/create-link.html" target="_blank">
+				<img src="images/Screenshot 2025-12-20 225635.png" alt="" data-aos="fade-in" data-aos-delay="1200">
+				<div class="content-overlay">
+					<div>
+						<div class="project-title">UPI QR Code Generator</div>
+						
+					</div>
+				</div>
+				<div>
+					🔹 Instantly generate UPI QR codes for fast and secure payments.<br>
+					🔹 Accept payments from all UPI apps with a single scan.<br>
+					🔹 Simple, reliable, and perfect for businesses of any size.<br>
+					🔹 One-click UPI QR code generation<br>
+					🔹 Fast, secure, and cashless payments<br>
+				</div>
+			</a>
+		</div>
+	</div>
+
+</div>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-4" style="padding-bottom:var(--wp--preset--spacing--30)"><div class="wp-block-mora-core-project-box">
+	<div class="project-box">
+		<div class="project-box-container " data-aos="scalexIn" data-aos-duration="1000">
+			<a href="https://ping-dist.s3.amazonaws.com/winggz_web_videos_se/main.html" target="_blank">
+				<img src="images/dashboard service entry.gif" alt="" data-aos="fade-in" data-aos-delay="1200">
+				<div class="content-overlay">
+					<div>
+						<div class="project-title">Service Entry dashboard</div>
+						
+					</div>
+				</div>
+				<div>
+					🔹 Implemented <b>website visitor tracking</b> to monitor user engagement and traffic patterns.<br>
+					🔹 Built <b>video credit management</b> to control usage, limits, and allocations.<br>
+					🔹 Enabled <b>purchased customer tracking</b> with detailed transaction insights.<br>
+					🔹 Added functionality for <b>video detail and pricing modifications</b> directly from the dashboard.<br>
+					🔹 Tracked <b>user login and logout activity</b> for security and auditing.<br>
+					🔹 Integrated <b>click analytics</b> to analyze user behavior across the platform.<br>
+					🔹 Maintained a <b>complete purchase history</b> for accurate reporting and customer support.
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+<div class="wp-block-column mt-lg-5 is-layout-flow wp-block-column-is-layout-flow col-lg-4" style="padding-bottom:var(--wp--preset--spacing--30)"><div class="wp-block-mora-core-project-box">
+	<div class="project-box">
+		<div class="project-box-container " data-aos="scalexIn" data-aos-duration="1000">
+			<a href="https://ping-app.online/" target="_blank">
+				<img src="images/projectping.png" alt="" data-aos="fade-in" data-aos-delay="1200">
+				<div class="content-overlay">
+					<div>
+						<div class="project-title">Ping WhatsApp Api</div>
+						
+					</div>
+				</div>
+				<div>
+
+							**Features** <br>
+
+							* Auto WhatsApp invoice delivery<br>
+							* Personalized messages with customer name<br>
+							* Multi-language messaging support<br>
+							* Image & product sharing<br>
+
+							**Benefits**
+
+							* Fully automated billing communication<br>
+							* Easy integration with existing systems<br>
+							* Simple, fast, and digital-ready<br>
+
+						</div>
+			</a>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<section class="wp-block-group is-layout-flow wp-block-group-is-layout-flow" style="border-bottom-color:var(--wp--preset--color--base-2);border-bottom-width:1px;padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+<div class="wp-block-group container is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-columns row is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-6">
+<h2 data-aos-delay="1000" data-aos="fade-right" class="wp-block-heading section-title heading-stroke has-medium-font-size">Testimonials</h2>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-6">
+<h2 data-aos="zoom-out-down" data-splitting="chars" class="wp-block-heading section-title has-medium-font-size splitting-char" style="text-transform:uppercase">what my clients
+			say</h2>
+</div>
+</div>
+
+
+
+<div style="height:var(--wp--preset--spacing--40)" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained"><div class="wp-block-mora-core-slider 2 42 1 42 1 42">
+<div class="swiper mora-slider" id="slider-d7daf25c-0472-432f-8a5f-9fe016a83ad1" data-autoplay-delay="3000" data-slider-speed="1500">
+	<div class="swiper-wrapper">
+	<div class="swiper-slide">
+	<div class="wp-block-mora-core-testimonial-card">
+<div class="testimonial-item">
+<div class="testimonial-item__client">
+
+<div class="text-center mb-1r">
+	<div class="testimonial-item__client-img">
+		<img decoding="async" width="44" height="44" src="images/client-profile-1.jpg" alt="John Smith">
+		</div>
+	<div class="testimonial-item__client-name">
+	John Smith	</div>
+	<div class="testimonial-item__client-occ">
+CEO	</div>
+</div>
+</div>
+<blockquote class="testimonial-item__text">
+
+<p>Thanks to Web Designer, weve seen a significant increase in traffic and engagement on our
+												site, ultimately leading to a boost in sales. We couldnt be happier with the results</p>
+</blockquote>
+</div>	
+</div></div><div class="swiper-slide">
+	<div class="wp-block-mora-core-testimonial-card">
+<div class="testimonial-item">
+<div class="testimonial-item__client">
+
+<div class="text-center mb-1r">
+	<div class="testimonial-item__client-img">
+		<img decoding="async" width="44" height="44" src="images/client-profile-2.jpg" alt="Jane Doe">
+		</div>
+	<div class="testimonial-item__client-name">
+	Jane Doe	</div>
+	<div class="testimonial-item__client-occ">
+Marketing Director	</div>
+</div>
+</div>
+<blockquote class="testimonial-item__text">
+
+<p>Thanks to Web Designer, weve seen a significant increase in traffic and engagement on our
+												site, ultimately leading to a boost in sales. We couldnt be happier with the results</p>
+</blockquote>
+</div>	
+</div></div><div class="swiper-slide">
+	<div class="wp-block-mora-core-testimonial-card">
+<div class="testimonial-item">
+<div class="testimonial-item__client">
+
+<div class="text-center mb-1r">
+	<div class="testimonial-item__client-img">
+		<img decoding="async" width="44" height="44" src="images/client-profile-3.jpg" alt="Mike Johnson">
+		</div>
+	<div class="testimonial-item__client-name">
+	Mike Johnson	</div>
+	<div class="testimonial-item__client-occ">
+Business owner	</div>
+</div>
+</div>
+<blockquote class="testimonial-item__text">
+
+<p>Thanks to Web Designer, weve seen a significant increase in traffic and engagement on our
+												site, ultimately leading to a boost in sales. We couldnt be happier with the results</p>
+</blockquote>
+</div>	
+</div></div><div class="swiper-slide">
+	<div class="wp-block-mora-core-testimonial-card">
+<div class="testimonial-item">
+<div class="testimonial-item__client">
+
+<div class="text-center mb-1r">
+	<div class="testimonial-item__client-img">
+		<img loading="lazy" decoding="async" width="44" height="44" src="images/client-profile-4.jpg" alt="Sarah Thompson">
+		</div>
+	<div class="testimonial-item__client-name">
+	Sarah Thompson	</div>
+	<div class="testimonial-item__client-occ">
+Marketing Manager	</div>
+</div>
+</div>
+<blockquote class="testimonial-item__text">
+
+<p>Thanks to Web Designer, weve seen a significant increase in traffic and engagement on our
+												site, ultimately leading to a boost in sales. We couldnt be happier with the results</p>
+</blockquote>
+</div>	
+</div></div><div class="swiper-slide">
+	<div class="wp-block-mora-core-testimonial-card">
+<div class="testimonial-item">
+<div class="testimonial-item__client">
+
+<div class="text-center mb-1r">
+	<div class="testimonial-item__client-img">
+		<img loading="lazy" decoding="async" width="44" height="44" src="images/client-profile-5.jpg" alt="Alice Watson">
+		</div>
+	<div class="testimonial-item__client-name">
+	Alice Watson	</div>
+	<div class="testimonial-item__client-occ">
+Business Owner	</div>
+</div>
+</div>
+<blockquote class="testimonial-item__text">
+
+<p>Thanks to Web Designer, weve seen a significant increase in traffic and engagement on our
+												site, ultimately leading to a boost in sales. We couldnt be happier with the results</p>
+</blockquote>
+</div>	
+</div></div><div class="swiper-slide">
+	<div class="wp-block-mora-core-testimonial-card">
+<div class="testimonial-item">
+<div class="testimonial-item__client">
+
+<div class="text-center mb-1r">
+	<div class="testimonial-item__client-img">
+		<img loading="lazy" decoding="async" width="44" height="44" src="images/client-profile-6.jpg" alt="Peter Braun">
+		</div>
+	<div class="testimonial-item__client-name">
+	Peter Braun	</div>
+	<div class="testimonial-item__client-occ">
+Business Owner	</div>
+</div>
+</div>
+<blockquote class="testimonial-item__text">
+
+<p>Thanks to Web Designer, weve seen a significant increase in traffic and engagement on our
+												site, ultimately leading to a boost in sales. We couldnt be happier with the results</p>
+</blockquote>
+</div>	
+</div></div>	</div>
+	<div class="mora-slider-action-container">
+					<div class="mora-slider-nav is-layout-flex wp-block-buttons-is-layout-flex">
+			<div class="wp-block-button is-style-outline">
+				<button class="wp-block-button__link nav-prev">
+				<i class="bi-chevron-left"></i>
+				</button>
+			</div>
+			<div class="wp-block-button is-style-outline">
+				<button class="wp-block-button__link nav-next">
+				<i class="bi-chevron-right"></i>
+				</button>
+			</div>
+
+			</div>
+		
+				<div class="mora-slider-pagination text-end"></div>
+			</div>
+	</div>
+	<script type="application/json" id="slider-d7daf25c-0472-432f-8a5f-9fe016a83ad1-attributes">
+		{"blockId":"slider-d7daf25c-0472-432f-8a5f-9fe016a83ad1","autoPlay":true,"speed":1500,"responsiveSettings":{"desktop":{"slidesPerView":2,"spaceBetween":42},"tablet":{"slidesPerView":1,"spaceBetween":42},"mobile":{"slidesPerView":1,"spaceBetween":42}},"showNavigation":true,"showPagination":true,"autoPlayDelay":3000}	</script>
+</div></div>
+</div>
+</section>
+
+
+
+<section id="blog" class="wp-block-group is-layout-flow wp-block-group-is-layout-flow" style="border-bottom-color:var(--wp--preset--color--base-2);border-bottom-width:1px;padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+<div class="wp-block-group container is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-columns row is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-4">
+<h2 data-aos-delay="1000" data-aos="fade-right" class="wp-block-heading section-title heading-stroke has-medium-font-size">My Blog</h2>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-8">
+<h2 data-aos="zoom-out-down" data-splitting="chars" class="wp-block-heading section-title has-medium-font-size splitting-char" style="text-transform:uppercase">latest news and
+			insight</h2>
+</div>
+</div>
+
+
+
+<div style="height:var(--wp--preset--spacing--50)" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-query is-layout-flow wp-block-query-is-layout-flow"><ul class="row row-cols-lg-3 row-cols-md-2 row-cols-1 wp-block-post-template is-layout-flow wp-block-post-template-is-layout-flow"><li class="wp-block-post post-2018 post type-post status-publish format-standard has-post-thumbnail hentry category-business category-programming">
+
+<div data-aos-delay="400" data-aos="fade-right" class="wp-block-group blog-card is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-group blog-card__img is-layout-constrained wp-block-group-is-layout-constrained"><figure class="wp-block-post-featured-image"><img loading="lazy" decoding="async" width="1360" height="575" src="images/d2196be335db.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" style="object-fit:cover;" srcset="images/blog-fi-1.jpg 1360w, images/d2196be335db.jpg 300w, images/d2196be335db.jpg 1024w, images/d2196be335db.jpg 768w" sizes="auto, (max-width: 1360px) 100vw, 1360px"></figure></div>
+
+
+
+<div class="wp-block-group blog-card__container is-layout-constrained wp-block-group-is-layout-constrained"><h4 class="blog-card__title wp-block-post-title"><a href="https://sstourblog.github.io/post.html?id=1" target="_self">A Morning with the Taj Mahal</a></h4>
+
+<div class="blog-card__text wp-block-post-excerpt"><p class="wp-block-post-excerpt__excerpt">
+	Standing in front of the Taj Mahal, with its reflection shimmering in the long water pool, one can feel the love and devotion with which Emperor Shah Jahan built this masterpiece in memory of his wife Mumtaz Mahal. The quiet surroundings, the calm Yamuna River behind it, and the glowing marble make the morning experience unforgettable. </p></div>
+
+
+<div class="wp-block-group blog-card__info is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-cb46ffcb wp-block-group-is-layout-flex"><div class="wp-block-post-author"><div class="wp-block-post-author__avatar"><img alt="" src="https://secure.gravatar.com/avatar/4eba19997413c3b84aa29d2af1f90bc83beae1d0b59e448eff73ea9150eb10cc?s=24&d=mm&r=g" srcset="https://secure.gravatar.com/avatar/4eba19997413c3b84aa29d2af1f90bc83beae1d0b59e448eff73ea9150eb10cc?s=48&d=mm&r=g 2x" class="avatar avatar-24 photo" height="24" width="24"></div><div class="wp-block-post-author__content"><p class="wp-block-post-author__name">mora</p></div></div>
+
+<div class="wp-block-post-date"><time datetime="2024-11-26T07:36:13+00:00">Nov 26</time></div></div>
+</div>
+</div>
+
+</li><li class="wp-block-post post-1302 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-copywriting tag-development tag-ui-ux-design">
+
+<div data-aos-delay="400" data-aos="fade-right" class="wp-block-group blog-card is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-group blog-card__img is-layout-constrained wp-block-group-is-layout-constrained"><figure class="wp-block-post-featured-image"><img loading="lazy" decoding="async" width="1600" height="900" src="images/695788612f9f.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" style="object-fit:cover;" srcset="images/695788612f9f.jpg 1600w, images/695788612f9f.jpg 300w, images/695788612f9f.jpg 1024w, images/695788612f9f.jpg 768w, images/695788612f9f.jpg 1536w" sizes="auto, (max-width: 1600px) 100vw, 1600px"></figure></div>
+
+
+
+<div class="wp-block-group blog-card__container is-layout-constrained wp-block-group-is-layout-constrained"><h4 class="blog-card__title wp-block-post-title"><a href="https://sstourblog.github.io/post.html?id=12" target="_self">🌾 Village Tour and Experience
+</a></h4>
+
+<div class="blog-card__text wp-block-post-excerpt"><p class="wp-block-post-excerpt__excerpt">
+	A village tour is a refreshing experience that takes us away from the noise of the city and brings us close to nature, culture, and traditional living. It shows how people live a peaceful life surrounded by farms, animals, fresh air, and strong community bonds.
+
+🌿 My Experience During the Village Tour</p></div>
+
+
+<div class="wp-block-group blog-card__info is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-cb46ffcb wp-block-group-is-layout-flex"><div class="wp-block-post-author"><div class="wp-block-post-author__avatar"><img alt="" src="https://secure.gravatar.com/avatar/4eba19997413c3b84aa29d2af1f90bc83beae1d0b59e448eff73ea9150eb10cc?s=24&d=mm&r=g" srcset="https://secure.gravatar.com/avatar/4eba19997413c3b84aa29d2af1f90bc83beae1d0b59e448eff73ea9150eb10cc?s=48&d=mm&r=g 2x" class="avatar avatar-24 photo" height="24" width="24"></div><div class="wp-block-post-author__content"><p class="wp-block-post-author__name">mora</p></div></div>
+
+<div class="wp-block-post-date"><time datetime="2024-10-24T09:26:58+00:00">Oct 24</time></div></div>
+</div>
+</div>
+
+</li><li class="wp-block-post post-228 post type-post status-publish format-standard has-post-thumbnail hentry category-business category-ecommerce tag-cyber tag-data">
+
+<div data-aos-delay="400" data-aos="fade-right" class="wp-block-group blog-card is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-group blog-card__img is-layout-constrained wp-block-group-is-layout-constrained"><figure class="wp-block-post-featured-image"><img loading="lazy" decoding="async" width="1600" height="900" src="images/54eec3f0624a.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" style="object-fit:cover;" srcset="images/54eec3f0624a.jpg 1600w, images/54eec3f0624a.jpg 300w, images/54eec3f0624a.jpg 1024w, images/54eec3f0624a.jpg 768w, images/54eec3f0624a.jpg 1536w" sizes="auto, (max-width: 1600px) 100vw, 1600px"></figure></div>
+
+
+
+<div class="wp-block-group blog-card__container is-layout-constrained wp-block-group-is-layout-constrained"><h4 class="blog-card__title wp-block-post-title"><a href="https://sstourblog.github.io/post.html?id=21" target="_self">Mumbai Tour Day 5
+</a></h4>
+
+<div class="blog-card__text wp-block-post-excerpt"><p class="wp-block-post-excerpt__excerpt">
+🌿 Villages & Nature Spots Around Vasai
+1. Nalasopara & Kelwe Beach Villages
+Distance from Vasai: 10–15 km
+Highlights: Quiet beaches, fishing villages, coconut groves
+Activities: Village walk, photography, beach relaxation	
+</p></div>
+
+
+<div class="wp-block-group blog-card__info is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-cb46ffcb wp-block-group-is-layout-flex"><div class="wp-block-post-author"><div class="wp-block-post-author__avatar"><img alt="" src="https://secure.gravatar.com/avatar/4eba19997413c3b84aa29d2af1f90bc83beae1d0b59e448eff73ea9150eb10cc?s=24&d=mm&r=g" srcset="https://secure.gravatar.com/avatar/4eba19997413c3b84aa29d2af1f90bc83beae1d0b59e448eff73ea9150eb10cc?s=48&d=mm&r=g 2x" class="avatar avatar-24 photo" height="24" width="24"></div><div class="wp-block-post-author__content"><p class="wp-block-post-author__name">mora</p></div></div>
+
+<div class="wp-block-post-date"><time datetime="2024-09-09T04:49:53+00:00">Sep 9</time></div></div>
+</div>
+</div>
+
+</li></ul></div>
+</div>
+</section>
+
+
+
+<section id="contact" class="wp-block-group position-relative is-layout-flow wp-block-group-is-layout-flow" style="border-bottom-color:var(--wp--preset--color--base-2);border-bottom-width:1px;padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+<div class="wp-block-group container is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-columns row is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column mb-5 mb-lg-0 is-layout-flow wp-block-column-is-layout-flow col-lg-6">
+<h2 data-aos="zoom-out-down" class="wp-block-heading section-title text-uppercase has-large-font-size">Lets <br><span class="ps-5">Get</span><br> In Touch</h2>
+
+
+
+<div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-8a6ca754 wp-block-group-is-layout-flex" style="margin-top:var(--wp--preset--spacing--20)"><div data-aos-delay="400" data-aos="fade-right" class="contact-item wp-block-mora-core-contact-detail">
+	<div class="ci-icon">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512" height="512"><path d="M1.225,8.467C1.331,8.344,8.48,1.449,8.48,1.449a5.026,5.026,0,0,1,7.055.015s7.134,6.88,7.239,7l-8.653,8.654a3.074,3.074,0,0,1-4.242,0Zm14.31,10.069a5.024,5.024,0,0,1-7.07,0L.229,10.3A4.962,4.962,0,0,0,0,11.708V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V11.708a4.962,4.962,0,0,0-.229-1.408Z"></path></svg>	</div>
+	<div class="ci-text">
+		<div class="ci-text-title">E-mail</div>
+		<div class="ci-text-detail">sanjayyadav11210@gmail.com</div>
+	</div>
+</div>
+
+
+<div data-aos-delay="800" data-aos="fade-right" class="contact-item wp-block-mora-core-contact-detail">
+	<div class="ci-icon">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512" height="512"> <path d="M23,11a1,1,0,0,1-1-1,8.008,8.008,0,0,0-8-8,1,1,0,0,1,0-2A10.011,10.011,0,0,1,24,10,1,1,0,0,1,23,11Zm-3-1a6,6,0,0,0-6-6,1,1,0,1,0,0,2,4,4,0,0,1,4,4,1,1,0,0,0,2,0Zm2.183,12.164.91-1.049a3.1,3.1,0,0,0,0-4.377c-.031-.031-2.437-1.882-2.437-1.882a3.1,3.1,0,0,0-4.281.006l-1.906,1.606A12.784,12.784,0,0,1,7.537,9.524l1.6-1.9a3.1,3.1,0,0,0,.007-4.282S7.291.939,7.26.908A3.082,3.082,0,0,0,2.934.862l-1.15,1C-5.01,9.744,9.62,24.261,17.762,24A6.155,6.155,0,0,0,22.183,22.164Z"></path></svg>	</div>
+	<div class="ci-text">
+		<div class="ci-text-title">Phone</div>
+		<div class="ci-text-detail">+91 638-857-4919</div>
+	</div>
+</div>
+
+
+<div data-aos-delay="1000" data-aos="fade-right" class="contact-item wp-block-mora-core-contact-detail">
+	<div class="ci-icon">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512" height="512"><path d="M12,.042a9.992,9.992,0,0,0-9.981,9.98c0,2.57,1.99,6.592,5.915,11.954a5.034,5.034,0,0,0,8.132,0c3.925-5.362,5.915-9.384,5.915-11.954A9.992,9.992,0,0,0,12,.042ZM12,14a4,4,0,1,1,4-4A4,4,0,0,1,12,14Z"></path></svg>	</div>
+	<div class="ci-text">
+		<div class="ci-text-title">Location</div>
+		<div class="ci-text-detail">576 Kewata ka Pura Sohansa Mungra Badshahpur Jaunpur,222202</div>
+	</div>
+</div>
+</div>
+</div>
+
+
+
+<div data-aos="zoom-out" class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-6">
+<div class="wp-block-group mora-contact-form is-layout-constrained wp-block-group-is-layout-constrained"><noscript class="ninja-forms-noscript-message">
+	Notice: JavaScript is required for this content.</noscript>
+<div id="nf-form-1-cont" class="nf-form-cont" aria-live="polite" aria-labelledby="nf-form-title-1" aria-describedby="nf-form-errors-1" role="form">
+
+    <div class="nf-loading-spinner"></div>
+
+</div>
+        <!-- That data is being printed as a workaround to page builders reordering the order of the scripts loaded-->
+        <script>var formDisplay=1;var nfForms=nfForms||[];var form=[];form.id='1';form.settings={"objectType":"Form Setting","editActive":true,"title":"Contact Me","key":"","created_at":"2024-11-29 13:36:31","default_label_pos":"above","conditions":[],"show_title":0,"clear_complete":"1","hide_complete":"1","wrapper_class":"","element_class":"","add_submit":"1","logged_in":"","not_logged_in_msg":"","sub_limit_number":"","sub_limit_msg":"","calculations":[],"formContentData":["name","email","message","send_message_1732933108017"],"container_styles_background-color":"","container_styles_border":"","container_styles_border-style":"","container_styles_border-color":"","container_styles_color":"","container_styles_height":"","container_styles_width":"","container_styles_font-size":"","container_styles_margin":"","container_styles_padding":"","container_styles_display":"","container_styles_float":"","container_styles_show_advanced_css":"0","container_styles_advanced":"","title_styles_background-color":"","title_styles_border":"","title_styles_border-style":"","title_styles_border-color":"","title_styles_color":"","title_styles_height":"","title_styles_width":"","title_styles_font-size":"","title_styles_margin":"","title_styles_padding":"","title_styles_display":"","title_styles_float":"","title_styles_show_advanced_css":"0","title_styles_advanced":"","row_styles_background-color":"","row_styles_border":"","row_styles_border-style":"","row_styles_border-color":"","row_styles_color":"","row_styles_height":"","row_styles_width":"","row_styles_font-size":"","row_styles_margin":"","row_styles_padding":"","row_styles_display":"","row_styles_show_advanced_css":"0","row_styles_advanced":"","row-odd_styles_background-color":"","row-odd_styles_border":"","row-odd_styles_border-style":"","row-odd_styles_border-color":"","row-odd_styles_color":"","row-odd_styles_height":"","row-odd_styles_width":"","row-odd_styles_font-size":"","row-odd_styles_margin":"","row-odd_styles_padding":"","row-odd_styles_display":"","row-odd_styles_show_advanced_css":"0","row-odd_styles_advanced":"","success-msg_styles_background-color":"","success-msg_styles_border":"","success-msg_styles_border-style":"","success-msg_styles_border-color":"","success-msg_styles_color":"","success-msg_styles_height":"","success-msg_styles_width":"","success-msg_styles_font-size":"","success-msg_styles_margin":"","success-msg_styles_padding":"","success-msg_styles_display":"","success-msg_styles_show_advanced_css":"0","success-msg_styles_advanced":"","error_msg_styles_background-color":"","error_msg_styles_border":"","error_msg_styles_border-style":"","error_msg_styles_border-color":"","error_msg_styles_color":"","error_msg_styles_height":"","error_msg_styles_width":"","error_msg_styles_font-size":"","error_msg_styles_margin":"","error_msg_styles_padding":"","error_msg_styles_display":"","error_msg_styles_show_advanced_css":"0","error_msg_styles_advanced":"","allow_public_link":0,"embed_form":"","form_title_heading_level":"3","changeEmailErrorMsg":"Please enter a valid email address!","changeDateErrorMsg":"Please enter a valid date!","confirmFieldErrorMsg":"These fields must match!","fieldNumberNumMinError":"Number Min Error","fieldNumberNumMaxError":"Number Max Error","fieldNumberIncrementBy":"Please increment by ","formErrorsCorrectErrors":"Please correct errors before submitting this form.","validateRequiredField":"This is a required field.","honeypotHoneypotError":"Honeypot Error","fieldsMarkedRequired":"Fields marked with an <span class=\"ninja-forms-req-symbol\">*<\/span> are required","currency":"","unique_field_error":"A form with this value has already been submitted.","objectDomain":"display","drawerDisabled":false,"ninjaForms":"Ninja Forms","fieldTextareaRTEInsertLink":"Insert Link","fieldTextareaRTEInsertMedia":"Insert Media","fieldTextareaRTESelectAFile":"Select a file","formHoneypot":"If you are a human seeing this field, please leave it empty.","fileUploadOldCodeFileUploadInProgress":"File Upload in Progress.","fileUploadOldCodeFileUpload":"FILE UPLOAD","currencySymbol":false,"thousands_sep":",","decimal_point":".","siteLocale":"en_US","dateFormat":"m\/d\/Y","startOfWeek":"1","of":"of","previousMonth":"Previous Month","nextMonth":"Next Month","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"weekdaysMin":["Su","Mo","Tu","We","Th","Fr","Sa"],"recaptchaConsentMissing":"reCaptcha validation couldn't load.","recaptchaMissingCookie":"reCaptcha v3 validation couldn't load the cookie needed to submit the form.","recaptchaConsentEvent":"Accept reCaptcha cookies before sending the form.","currency_symbol":"","beforeForm":"","beforeFields":"","afterFields":"","afterForm":""};form.fields=[{"objectType":"Field","objectDomain":"fields","editActive":false,"order":1,"idAttribute":"id","label":"Name","key":"name","type":"textbox","created_at":"2024-11-29 13:36:31","label_pos":"above","required":1,"placeholder":"","default":"","wrapper_class":"","element_class":"","container_class":"","input_limit":"","input_limit_type":"characters","input_limit_msg":"Character(s) left","manual_key":"","disable_input":"","admin_label":"","help_text":"","desc_text":"","disable_browser_autocomplete":"","mask":"","custom_mask":"","wrap_styles_background-color":"","wrap_styles_border":"","wrap_styles_border-style":"","wrap_styles_border-color":"","wrap_styles_color":"","wrap_styles_height":"","wrap_styles_width":"","wrap_styles_font-size":"","wrap_styles_margin":"","wrap_styles_padding":"","wrap_styles_display":"","wrap_styles_float":"","wrap_styles_show_advanced_css":0,"wrap_styles_advanced":"","label_styles_background-color":"","label_styles_border":"","label_styles_border-style":"","label_styles_border-color":"","label_styles_color":"","label_styles_height":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"","label_styles_padding":"","label_styles_display":"","label_styles_float":"","label_styles_show_advanced_css":0,"label_styles_advanced":"","element_styles_background-color":"","element_styles_border":"","element_styles_border-style":"","element_styles_border-color":"","element_styles_color":"","element_styles_height":"","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_display":"","element_styles_float":"","element_styles_show_advanced_css":0,"element_styles_advanced":"","cellcid":"c3277","custom_name_attribute":"","personally_identifiable":"","value":"","id":1,"beforeField":"","afterField":"","parentType":"textbox","element_templates":["textbox","input"],"old_classname":"","wrap_template":"wrap"},{"objectType":"Field","objectDomain":"fields","editActive":false,"order":2,"idAttribute":"id","label":"Email","key":"email","type":"email","created_at":"2024-11-29 13:36:31","label_pos":"above","required":1,"placeholder":"","default":"","wrapper_class":"","element_class":"","container_class":"","admin_label":"","help_text":"","desc_text":"","wrap_styles_background-color":"","wrap_styles_border":"","wrap_styles_border-style":"","wrap_styles_border-color":"","wrap_styles_color":"","wrap_styles_height":"","wrap_styles_width":"","wrap_styles_font-size":"","wrap_styles_margin":"","wrap_styles_padding":"","wrap_styles_display":"","wrap_styles_float":"","wrap_styles_show_advanced_css":0,"wrap_styles_advanced":"","label_styles_background-color":"","label_styles_border":"","label_styles_border-style":"","label_styles_border-color":"","label_styles_color":"","label_styles_height":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"","label_styles_padding":"","label_styles_display":"","label_styles_float":"","label_styles_show_advanced_css":0,"label_styles_advanced":"","element_styles_background-color":"","element_styles_border":"","element_styles_border-style":"","element_styles_border-color":"","element_styles_color":"","element_styles_height":"","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_display":"","element_styles_float":"","element_styles_show_advanced_css":0,"element_styles_advanced":"","cellcid":"c3281","custom_name_attribute":"email","personally_identifiable":1,"value":"","id":2,"beforeField":"","afterField":"","parentType":"email","element_templates":["email","input"],"old_classname":"","wrap_template":"wrap"},{"objectType":"Field","objectDomain":"fields","editActive":false,"order":3,"idAttribute":"id","label":"Message","key":"message","type":"textarea","created_at":"2024-11-29 13:36:31","label_pos":"above","required":1,"placeholder":"","default":"","wrapper_class":"","element_class":"","container_class":"","input_limit":"","input_limit_type":"characters","input_limit_msg":"Character(s) left","manual_key":"","disable_input":"","admin_label":"","help_text":"","desc_text":"","disable_browser_autocomplete":"","textarea_rte":"","disable_rte_mobile":"","textarea_media":"","wrap_styles_background-color":"","wrap_styles_border":"","wrap_styles_border-style":"","wrap_styles_border-color":"","wrap_styles_color":"","wrap_styles_height":"","wrap_styles_width":"","wrap_styles_font-size":"","wrap_styles_margin":"","wrap_styles_padding":"","wrap_styles_display":"","wrap_styles_float":"","wrap_styles_show_advanced_css":0,"wrap_styles_advanced":"","label_styles_background-color":"","label_styles_border":"","label_styles_border-style":"","label_styles_border-color":"","label_styles_color":"","label_styles_height":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"","label_styles_padding":"","label_styles_display":"","label_styles_float":"","label_styles_show_advanced_css":0,"label_styles_advanced":"","element_styles_background-color":"","element_styles_border":"","element_styles_border-style":"","element_styles_border-color":"","element_styles_color":"","element_styles_height":"","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_display":"","element_styles_float":"","element_styles_show_advanced_css":0,"element_styles_advanced":"","cellcid":"c3284","value":"","id":3,"beforeField":"","afterField":"","parentType":"textarea","element_templates":["textarea","input"],"old_classname":"","wrap_template":"wrap"},{"objectType":"Field","objectDomain":"fields","editActive":false,"order":5,"idAttribute":"id","label":"Send Message","key":"send_message_1732933108017","type":"submit","created_at":"2024-11-29 13:36:32","processing_label":"Processing","container_class":"","element_class":"","wrap_styles_background-color":"","wrap_styles_border":"","wrap_styles_border-style":"","wrap_styles_border-color":"","wrap_styles_color":"","wrap_styles_height":"","wrap_styles_width":"","wrap_styles_font-size":"","wrap_styles_margin":"","wrap_styles_padding":"","wrap_styles_display":"","wrap_styles_float":"","wrap_styles_show_advanced_css":0,"wrap_styles_advanced":"","label_styles_background-color":"","label_styles_border":"","label_styles_border-style":"","label_styles_border-color":"","label_styles_color":"","label_styles_height":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"","label_styles_padding":"","label_styles_display":"","label_styles_float":"","label_styles_show_advanced_css":0,"label_styles_advanced":"","element_styles_background-color":"","element_styles_border":"","element_styles_border-style":"","element_styles_border-color":"","element_styles_color":"","element_styles_height":"","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_display":"","element_styles_float":"","element_styles_show_advanced_css":0,"element_styles_advanced":"","submit_element_hover_styles_background-color":"","submit_element_hover_styles_border":"","submit_element_hover_styles_border-style":"","submit_element_hover_styles_border-color":"","submit_element_hover_styles_color":"","submit_element_hover_styles_height":"","submit_element_hover_styles_width":"","submit_element_hover_styles_font-size":"","submit_element_hover_styles_margin":"","submit_element_hover_styles_padding":"","submit_element_hover_styles_display":"","submit_element_hover_styles_float":"","submit_element_hover_styles_show_advanced_css":0,"submit_element_hover_styles_advanced":"","cellcid":"c3287","admin_label":"","drawerDisabled":false,"id":4,"beforeField":"","afterField":"","value":"","label_pos":"above","parentType":"textbox","element_templates":["submit","button","input"],"old_classname":"","wrap_template":"wrap-no-label"}];nfForms.push(form);</script>
         </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
-</html>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+
+
+<footer class="wp-block-template-part">
+<div class="wp-block-group container is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)">
+  
+  <div class="wp-block-columns row align-items-center is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+    
+    <div class="wp-block-column pb-lg-0 is-layout-flow wp-block-column-is-layout-flow col-lg-5" style="padding-bottom:var(--wp--preset--spacing--30)">
+      
+      <p data-aos-offset="20" data-aos="fade-right" class="has-tint-2-color has-text-color has-link-color wp-elements-d12b56cc187ecf9c33c683e20bebaf8b text-lg-start text-center">© NusaTheme 2025 | All Rights Reserved</p>
+      
+    </div>
+    
+
+    
+    <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow col-lg-7">
+      
+      <div data-aos-delay="400" data-aos-offset="0" data-aos="fade-right" class="wp-block-group is-content-justification-right is-nowrap is-layout-flex wp-container-core-group-is-layout-f4c28e8b wp-block-group-is-layout-flex justify-content-lg-end justify-content-center">
+<a class="social-media-link wp-block-mora-core-social-media-icon" href="">
+<i class="bi-facebook"></i></a>
+
+
+        
+<a class="social-media-link wp-block-mora-core-social-media-icon" href="">
+<i class="bi-twitter-x"></i></a>
+
+
+        
+<a class="social-media-link wp-block-mora-core-social-media-icon" href="">
+<i class="bi-linkedin"></i></a>
+
+
+        
+<a class="social-media-link wp-block-mora-core-social-media-icon" href="">
+<i class="bi-dribbble"></i></a>
+
+      </div>
+      
+    </div>
+    
+  </div>
+  
+</div>
+</footer></div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/mora/*"},{"not":{"href_matches":["/mora/wp-*.php","/mora/wp-admin/*","/mora/wp-content/uploads/*","/mora/wp-content/*","/mora/wp-content/plugins/*","/mora/wp-content/themes/mora/*","/mora/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<!-- CURSOR -->
+		<div class="mouse-cursor cursor-outer"></div>
+		<div class="mouse-cursor cursor-inner"></div>
+		<!-- /CURSOR -->
+					<!-- Back to top -->
+		<div class="back-to-top-wrapper">
+			<a href="#Home" class="back-to-top">
+			<span class="visually-hidden">Back to top</span>
+			<i class="bi bi-arrow-up-short"></i>
+			<div class="progress-wrap active-progress">
+				<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+				<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+				</svg>
+			</div>
+			</a>
+		</div>
+		<!-- /Back to top -->
+					<!-- Preloader -->
+		<div class="preloader">
+			<div class="ripple">
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<!-- /Preloader -->
+		<script type="module" src="js/view.min.js" id="@wordpress/block-library/navigation/view-js-module" fetchpriority="low" data-wp-router-options="{" loadonclientnavigation":true}"=""></script>
+<script src="js/fslightbox.js" id="fslightbox-js"></script>
+<script src="js/bootstrap.bundle.min.js" id="bootstrap-js"></script>
+<script src="js/splitting.min.js" id="splitting-js"></script>
+<script src="js/swiper-bundle.min.js" id="swiper-js"></script>
+<script src="js/aos.js" id="aos-js-js"></script>
+<script src="js/typed.js" id="typed-js"></script>
+<script src="js/lenis.min.js" id="lenis-js-js"></script>
+<script src="js/main.js" id="main-js"></script>
+<script id="wp-block-template-skip-link-js-after">
+	( function() {
+		var skipLinkTarget = document.querySelector( 'main' ),
+			sibling,
+			skipLinkTargetID,
+			skipLink;
+
+		// Early exit if a skip-link target can't be located.
+		if ( ! skipLinkTarget ) {
+			return;
+		}
+
+		/*
+		 * Get the site wrapper.
+		 * The skip-link will be injected in the beginning of it.
+		 */
+		sibling = document.querySelector( '.wp-site-blocks' );
+
+		// Early exit if the root element was not found.
+		if ( ! sibling ) {
+			return;
+		}
+
+		// Get the skip-link target's ID, and generate one if it doesn't exist.
+		skipLinkTargetID = skipLinkTarget.id;
+		if ( ! skipLinkTargetID ) {
+			skipLinkTargetID = 'wp--skip-link--target';
+			skipLinkTarget.id = skipLinkTargetID;
+		}
+
+		// Create the skip link.
+		skipLink = document.createElement( 'a' );
+		skipLink.classList.add( 'skip-link', 'screen-reader-text' );
+		skipLink.id = 'wp-skip-link';
+		skipLink.href = '#' + skipLinkTargetID;
+		skipLink.innerText = 'Skip to content';
+
+		// Inject the skip link.
+		sibling.parentElement.insertBefore( skipLink, sibling );
+	}() );
+	
+//# sourceURL=wp-block-template-skip-link-js-after
+</script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://wpdemo.ajufbox.com/mora/wp-includes/js/wp-emoji-release.min.js?ver=6.9"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://wpdemo.ajufbox.com/mora/wp-includes/js/wp-emoji-loader.min.js
+</script>
+<script id="tmpl-nf-layout" type="text/template">
+	<span id="nf-form-title-{{{ data.id }}}" class="nf-form-title">
+		{{{ ( 1 == data.settings.show_title ) ? '<h' + data.settings.form_title_heading_level + '>' + data.settings.title + '</h' + data.settings.form_title_heading_level + '>' : '' }}}
+	</span>
+	<div class="nf-form-wrap ninja-forms-form-wrap">
+		<div class="nf-response-msg"></div>
+		<div class="nf-debug-msg"></div>
+		<div class="nf-before-form"></div>
+		<div class="nf-form-layout"></div>
+		<div class="nf-after-form"></div>
+	</div>
+</script>
+
+<script id="tmpl-nf-empty" type="text/template">
+
+</script>
+<script id="tmpl-nf-before-form" type="text/template">
+	{{{ data.beforeForm }}}
+</script><script id="tmpl-nf-after-form" type="text/template">
+	{{{ data.afterForm }}}
+</script><script id="tmpl-nf-before-fields" type="text/template">
+    <div class="nf-form-fields-required">{{{ data.renderFieldsMarkedRequired() }}}</div>
+    {{{ data.beforeFields }}}
+</script><script id="tmpl-nf-after-fields" type="text/template">
+    {{{ data.afterFields }}}
+    <div id="nf-form-errors-{{{ data.id }}}" class="nf-form-errors" role="alert"></div>
+    <div class="nf-form-hp"></div>
+</script>
+<script id="tmpl-nf-before-field" type="text/template">
+    {{{ data.beforeField }}}
+</script><script id="tmpl-nf-after-field" type="text/template">
+    {{{ data.afterField }}}
+</script><script id="tmpl-nf-form-layout" type="text/template">
+	<form>
+		<div>
+			<div class="nf-before-form-content"></div>
+			<div class="nf-form-content {{{ data.element_class }}}"></div>
+			<div class="nf-after-form-content"></div>
+		</div>
+	</form>
+</script><script id="tmpl-nf-form-hp" type="text/template">
+	<label id="nf-label-field-hp-{{{ data.id }}}" for="nf-field-hp-{{{ data.id }}}" aria-hidden="true">
+		{{{ nfi18n.formHoneypot }}}
+		<input id="nf-field-hp-{{{ data.id }}}" name="nf-field-hp" class="nf-element nf-field-hp" type="text" value="" aria-labelledby="nf-label-field-hp-{{{ data.id }}}" />
+	</label>
+</script>
+<script id="tmpl-nf-field-layout" type="text/template">
+    <div id="nf-field-{{{ data.id }}}-container" class="nf-field-container {{{ data.type }}}-container {{{ data.renderContainerClass() }}}">
+        <div class="nf-before-field"></div>
+        <div class="nf-field"></div>
+        <div class="nf-after-field"></div>
+    </div>
+</script>
+<script id="tmpl-nf-field-before" type="text/template">
+    {{{ data.beforeField }}}
+</script><script id="tmpl-nf-field-after" type="text/template">
+    <#
+    /*
+     * Render our input limit section if that setting exists.
+     */
+    #>
+    <div class="nf-input-limit"></div>
+    <#
+    /*
+     * Render our error section if we have an error.
+     */
+    #>
+    <div id="nf-error-{{{ data.id }}}" class="nf-error-wrap nf-error" role="alert"></div>
+    <#
+    /*
+     * Render any custom HTML after our field.
+     */
+    #>
+    {{{ data.afterField }}}
+</script>
+<script id="tmpl-nf-field-wrap" type="text/template">
+	<div id="nf-field-{{{ data.id }}}-wrap" class="{{{ data.renderWrapClass() }}}" data-field-id="{{{ data.id }}}">
+		<#
+		/*
+		 * This is our main field template. It's called for every field type.
+		 * Note that must have ONE top-level, wrapping element. i.e. a div/span/etc that wraps all of the template.
+		 */
+        #>
+		<#
+		/*
+		 * Render our label.
+		 */
+        #>
+		{{{ data.renderLabel() }}}
+		<#
+		/*
+		 * Render our field element. Uses the template for the field being rendered.
+		 */
+        #>
+		<div class="nf-field-element">{{{ data.renderElement() }}}</div>
+		<#
+		/*
+		 * Render our Description Text.
+		 */
+        #>
+		{{{ data.renderDescText() }}}
+	</div>
+</script>
+<script id="tmpl-nf-field-wrap-no-label" type="text/template">
+    <div id="nf-field-{{{ data.id }}}-wrap" class="{{{ data.renderWrapClass() }}}" data-field-id="{{{ data.id }}}">
+        <div class="nf-field-label"></div>
+        <div class="nf-field-element">{{{ data.renderElement() }}}</div>
+        <div class="nf-error-wrap"></div>
+    </div>
+</script>
+<script id="tmpl-nf-field-wrap-no-container" type="text/template">
+
+        {{{ data.renderElement() }}}
+
+        <div class="nf-error-wrap"></div>
+</script>
+<script id="tmpl-nf-field-label" type="text/template">
+	<div class="nf-field-label">
+		<# if ( data.type === "listcheckbox" || data.type === "listradio" || data.type === "listimage" || data.type === "date" || data.type === "starrating" ) { #>
+			<span id="nf-label-field-{{{ data.id }}}"
+				class="nf-label-span {{{ data.renderLabelClasses() }}}">
+					{{{ ( data.maybeFilterHTML() === 'true' ) ? _.escape( data.label ) : data.label }}} {{{ ( 'undefined' != typeof data.required && 1 == data.required ) ? '<span class="ninja-forms-req-symbol">*</span>' : '' }}} 
+					{{{ data.maybeRenderHelp() }}}
+			</span>
+		<# } else { #>
+			<label for="nf-field-{{{ data.id }}}"
+					id="nf-label-field-{{{ data.id }}}"
+					class="{{{ data.renderLabelClasses() }}}">
+						{{{ ( data.maybeFilterHTML() === 'true' ) ? _.escape( data.label ) : data.label }}} {{{ ( 'undefined' != typeof data.required && 1 == data.required ) ? '<span class="ninja-forms-req-symbol">*</span>' : '' }}} 
+						{{{ data.maybeRenderHelp() }}}
+			</label>
+		<# } #>
+	</div>
+</script><script id="tmpl-nf-field-error" type="text/template">
+	<div class="nf-error-msg nf-error-{{{ data.id }}}" aria-live="assertive">{{{ data.msg }}}</div>
+</script><script id="tmpl-nf-form-error" type="text/template">
+	<div class="nf-error-msg nf-error-{{{ data.id }}}">{{{ data.msg }}}</div>
+</script><script id="tmpl-nf-field-input-limit" type="text/template">
+    {{{ data.currentCount() }}} {{{ nfi18n.of }}} {{{ data.input_limit }}} {{{ data.input_limit_msg }}}
+</script><script id="tmpl-nf-field-null" type="text/template">
+</script><script id="tmpl-nf-field-textbox" type="text/template">
+	<input
+		type="text"
+		value="{{{ _.escape( data.value ) }}}"
+		class="{{{ data.renderClasses() }}} nf-element"
+		{{{ data.renderPlaceholder() }}}
+		{{{ data.maybeDisabled() }}}
+		{{{ data.maybeInputLimit() }}}
+		id="nf-field-{{{ data.id }}}"
+		name="{{ data.custom_name_attribute || 'nf-field-' + data.id + '-' + data.type }}"
+		{{{ data.maybeDisableAutocomplete() }}}
+		aria-invalid="false"
+		aria-describedby="nf-error-{{{ data.id }}} nf-description-{{{ data.id }}}"
+		aria-labelledby="nf-label-field-{{{ data.id }}}"
+		{{{ data.maybeRequired() }}}
+	>
+</script>
+<script id="tmpl-nf-field-input" type="text/template">
+    <input id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" aria-invalid="false" aria-describedby="nf-error-{{{ data.id }}} nf-description-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element" type="text" value="{{{ _.escape( data.value ) }}}" {{{ data.renderPlaceholder() }}} {{{ data.maybeDisabled() }}}
+           aria-labelledby="nf-label-field-{{{ data.id }}}"
+
+            {{{ data.maybeRequired() }}}
+    >
+</script>
+<script id="tmpl-nf-field-email" type="text/template">
+	<input
+		type="email"
+		value="{{{ _.escape( data.value ) }}}"
+		class="{{{ data.renderClasses() }}} nf-element"
+		id="nf-field-{{{ data.id }}}"
+		name="{{ data.custom_name_attribute || 'nf-field-' + data.id + '-' + data.type }}"
+		{{{data.maybeDisableAutocomplete()}}}
+		{{{ data.renderPlaceholder() }}}
+		{{{ data.maybeDisabled() }}}
+		aria-invalid="false"
+		aria-describedby="nf-error-{{{ data.id }}} nf-description-{{{ data.id }}}"
+		aria-labelledby="nf-label-field-{{{ data.id }}}"
+		{{{ data.maybeRequired() }}}
+	>
+</script>
+<script id="tmpl-nf-field-textarea" type="text/template">
+    <textarea id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" aria-invalid="false" aria-describedby="nf-error-{{{ data.id }}} nf-description-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element" {{{ data.renderPlaceholder() }}} {{{ data.maybeDisabled() }}} {{{ data.maybeDisableAutocomplete() }}} {{{ data.maybeInputLimit() }}}
+        aria-labelledby="nf-label-field-{{{ data.id }}}"
+
+        {{{ data.maybeRequired() }}}
+    >{{{ _.escape( data.value ) }}}</textarea>
+</script>
+
+<!-- Rich Text Editor Templates -->
+
+<script id="tmpl-nf-rte-media-button" type="text/template">
+    <span class="dashicons dashicons-admin-media"></span>
+</script>
+
+<script id="tmpl-nf-rte-link-button" type="text/template">
+    <span class="dashicons dashicons-admin-links"></span>
+</script>
+
+<script id="tmpl-nf-rte-unlink-button" type="text/template">
+    <span class="dashicons dashicons-editor-unlink"></span>
+</script>
+
+<script id="tmpl-nf-rte-link-dropdown" type="text/template">
+    <div class="summernote-link">
+        URL
+        <input type="url" class="widefat code link-url"> <br />
+        Text
+        <input type="url" class="widefat code link-text"> <br />
+        <label>
+            <input type="checkbox" class="link-new-window"> {{{ nfi18n.fieldsTextareaOpenNewWindow }}}
+        </label>
+        <input type="button" class="cancel-link extra" value="Cancel">
+        <input type="button" class="insert-link extra" value="Insert">
+    </div>
+</script>
+<script id="tmpl-nf-field-submit" type="text/template">
+
+<# 
+let myType = data.type
+if('save'== data.type){
+	myType = 'button'
+}
+#>
+<input id="nf-field-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element " type="{{{myType}}}" value="{{{ ( data.maybeFilterHTML() === 'true' ) ? _.escape( data.label ) : data.label }}}" {{{ ( data.disabled ) ? 'aria-disabled="true" disabled="true"' : '' }}}>
+
+</script><script id="tmpl-nf-field-button" type="text/template">
+    <button id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" class="{{{ data.classes }}} nf-element">
+        {{{ ( data.maybeFilterHTML() === 'true' ) ? _.escape( data.label ) : data.label }}}
+    </button>
+</script>
+
+</body></html>
