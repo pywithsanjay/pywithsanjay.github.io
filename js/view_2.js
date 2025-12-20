@@ -1,0 +1,1 @@
+document.querySelectorAll(".project-box").forEach((e=>{e.querySelectorAll("img, .project-box-container").forEach((e=>{e.addEventListener("transitionend",(function(e){e.currentTarget.dataset.aos&&e.currentTarget.removeAttribute("data-aos")}))}))}));
