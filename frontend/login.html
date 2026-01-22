@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Home Tutor Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f6f6f6;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    .login-wrapper {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-card {
+      width: 100%;
+      max-width: 420px;
+      background: #fff;
+      border-radius: 6px;
+      padding: 25px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .login-title {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .form-control {
+      height: 45px;
+    }
+
+    .btn-login {
+      background: #ff7a00;
+      color: #fff;
+      font-weight: 600;
+      height: 45px;
+      border: none;
+    }
+
+    .btn-login:hover {
+      background: #e86d00;
+    }
+
+    .small-link {
+      font-size: 14px;
+    }
+
+    .divider {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .action-box {
+      border: 1px solid #eee;
+      padding: 15px;
+      text-align: center;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    .action-box h6 {
+      font-weight: 600;
+    }
+
+    .action-box button {
+      margin-top: 10px;
+      background: #ff7a00;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="login-wrapper">
+
+  <div class="login-card">
+
+    <!-- Title -->
+    <div class="login-title">
+      <h5>Login</h5>
+    </div>
+
+    <!-- Email / Mobile -->
+    <div class="mb-3 input-group">
+      <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+      <input type="text" id="username" class="form-control" placeholder="Enter Mobile or Email">
+    </div>
+
+    <!-- Password -->
+    <div class="mb-3 input-group">
+      <span class="input-group-text"><i class="bi bi-lock"></i></span>
+      <input type="password" id="password" class="form-control" placeholder="Enter Password">
+    </div>
+
+    <!-- Login Button -->
+    <button class="btn btn-login w-100" onclick="login()">LOGIN</button>
+
+    <!-- Remember / Forgot -->
+    <div class="d-flex justify-content-between align-items-center mt-3 small-link">
+      <div>
+        <input type="checkbox"> Remember Me
+      </div>
+      <a href="#">Forgot password?</a>
+    </div>
+
+    <!-- Divider -->
+    <div class="divider">New User?</div>
+
+    <!-- Student -->
+    <div class="action-box">
+      <h6>Are you a Student / Parent?</h6>
+      <p class="small text-muted">Looking for Home Tutors?</p>
+      <button onclick="location.href='student-register.html'">
+        POST TUITION NEEDS FOR FREE
+      </button>
+    </div>
+
+    <!-- Tutor -->
+    <div class="action-box">
+      <h6>Are you a Home Tutor?</h6>
+      <p class="small text-muted">Looking for Students?</p>
+      <button onclick="location.href='tutor-register.html'">
+        JOIN AS TUTOR – FREE
+      </button>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function login() {
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  if (!username || !password) {
+    Swal.fire({
+      icon: "warning",
+      title: "Missing Fields",
+      text: "Mobile or Email and Password are required",
+      confirmButtonColor: "#ff7a00"
+    });
+    return;
+  }
+
+  Swal.fire({
+    title: "Logging in...",
+    text: "Please wait",
+    allowOutsideClick: false,
+    didOpen: () => {
+      Swal.showLoading();
+    }
+  });
+
+  fetch("https://ncrhomr.vercel.app/admin/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, password })
+  })
+  .then(res => res.json())
+  .then(data => {
+    Swal.close();
+
+    if (data.session_token) {
+      localStorage.setItem("admin_token", data.session_token);
+
+      Swal.fire({
+        icon: "success",
+        title: "Login Successful",
+        text: "Welcome back!",
+        confirmButtonColor: "#28a745"
+      }).then(() => {
+        window.location.href = "index.html";
+      });
+
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Login Failed",
+        text: "Invalid username or password",
+        confirmButtonColor: "#dc3545"
+      });
+    }
+  })
+  .catch(() => {
+    Swal.close();
+    Swal.fire({
+      icon: "error",
+      title: "Server Error",
+      text: "Something went wrong. Please try again later.",
+      confirmButtonColor: "#dc3545"
+    });
+  });
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</body>
+</html>

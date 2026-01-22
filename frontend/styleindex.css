@@ -1,0 +1,61 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+  background: linear-gradient(135deg,#f4f8ff,#e9f0ff);
+  padding: 80px 0;
+}
+
+.search-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.btn-orange {
+  background: #ff6b00;
+  color: #fff;
+}
+.btn-orange:hover {
+  background: #e65a00;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+.stats h3 {
+  color: #ff6b00;
+  font-weight: 700;
+}
+
+.section {
+  padding: 70px 0;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.list-check li {
+  list-style: none;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.list-check li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ff6b00;
+}
+
+.footer-cta {
+  background: #0d6efd;
+  padding: 40px 0;
+}

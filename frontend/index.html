@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Tutor Site | Learn & Achieve</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styleindex.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+  <div class="container">
+    <a href="index.html" class="navbar-brand fw-bold" href="#">
+      <i class="fa-solid fa-house-chimney"></i> HomeTutor
+    </a>
+
+  <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="student-register.html">Find Tutor</a></li>
+        <li class="nav-item"><a class="nav-link" href="tutor-register.html">Join As Tutor</a></li>
+        <li class="nav-item"><a class="nav-link" href="findbyidtutor.html">Find Tutor By Id</a></li>
+        <li class="nav-item"><a class="nav-link" href="findbyidtution.html">Find Tuition By Id</a></li>      </ul>
+      <div class="d-flex gap-2">
+        <a href="login.html" class="btn btn-outline-light btn-sm">Login</a>
+        <a href="ragister.html" class="btn btn-warning btn-sm">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="hero text-center">
+  <div class="container">
+    <h1 class="fw-bold">We Help Students & Tutors Find Each Other</h1>
+    <p class="lead">Search Home Tutors Near You – Online or Offline</p>
+
+   <div class="search-box shadow">
+    <div class="row g-2">
+      <div class="col-md-3">
+        <select class="form-select" id="citySelect">
+          <option value="">Select City</option>
+        </select>
+      </div>
+
+      <div class="col-md-3">
+        <select class="form-select" id="typeSelect">
+          <option value="tutor">Tutors</option>
+          <option value="student">Students</option>
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <input class="form-control" id="queryInput" placeholder="Course or Subject">
+      </div>
+
+      <div class="col-md-2 d-grid">
+        <button class="btn btn-orange" onclick="doSearch()">Search</button>
+      </div>
+    </div>
+</div>
+
+
+    <div class="stats mt-5">
+      <div><h3>All India</h3><p>Coverage</p></div>
+      <div><h3>8,00,000+</h3><p>Home Tutors</p></div>
+      <div><h3>6,00,000+</h3><p>Tuition Jobs</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="container my-5">
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="card h-100 text-center shadow-sm p-4">
+        <h4>Looking for Home Tutors?</h4>
+        <p>Tell your needs → Get free demo → Confirm if you like</p>
+        <a href="tutor-register.html" class="btn btn-orange mt-2">I Need a Tutor</a>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card h-100 text-center shadow-sm p-4">
+        <h4>Looking for Tuition Jobs?</h4>
+        <p>Create profile → Get students → Start earning</p>
+        <a href="student-register.html" class="btn btn-primary mt-2">Join As Tutor</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2 class="section-title">Why Home Tuition?</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <h5>Students / Parents</h5>
+        <ul class="list-check">
+          <li>Personalized one-to-one attention</li>
+          <li>Better grades & concept clarity</li>
+          <li>Expert guidance at home</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h5>Tutors</h5>
+        <ul class="list-check">
+          <li>Be your own boss</li>
+          <li>Flexible timings</li>
+          <li>Extra monthly income</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">How It Works</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <h5>Students / Parents</h5>
+        <ol>
+          <li>Post tuition requirement</li>
+          <li>Get free demo class</li>
+          <li>Confirm tutor</li>
+          <li>Go premium if needed</li>
+        </ol>
+      </div>
+      <div class="col-md-6">
+        <h5>Tutors</h5>
+        <ol>
+          <li>Create profile</li>
+          <li>Apply to tuition jobs</li>
+          <li>Take demo class</li>
+          <li>Start earning</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="footer-cta">
+  <div class="container">
+    <div class="row text-center text-white">
+      <div class="col-md-6 mb-3">
+        <h5>Looking for a Home Tutor?</h5>
+        <a class="btn btn-warning mt-2">Post Requirement</a>
+      </div>
+      <div class="col-md-6">
+        <h5>Want to Earn as Tutor?</h5>
+        <a class="btn btn-warning mt-2">Register Free</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-center py-3 bg-dark text-white">
+  © 2026 HomeTutorSite.com
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("https://ncrhomr.vercel.app/cities")
+    .then(response => response.json())
+    .then(data => {
+      const citySelect = document.getElementById("citySelect");
+
+      citySelect.innerHTML = '<option value="">Select City</option>';
+
+      data.cities.forEach(city => {
+        if (city && city.trim() !== "") {
+          const option = document.createElement("option");
+          option.value = city;
+          option.textContent = city;
+          citySelect.appendChild(option);
+        }
+      });
+    })
+    .catch(error => {
+      console.error("Error loading cities:", error);
+    });
+});
+</script>
+
+<script>
+function doSearch() {
+  const city = document.getElementById("citySelect").value;
+  const q    = document.getElementById("queryInput").value.trim();
+  const type = document.getElementById("typeSelect")?.value || "tutor";
+
+
+  const params = new URLSearchParams();
+
+  if (city) params.append("city", city);
+  if (q)    params.append("q", q);
+  params.append("type", type); 
+
+  window.location.href = `search.html?${params.toString()}`;
+}
+</script>
+
+
+
+</body>
+</html>

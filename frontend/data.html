@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tuition Requirement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+
+
+.blurred {
+  filter: blur(6px);
+  user-select: none;
+  pointer-events: none;
+}
+
+
+
+</style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+
+</head>
+<header class="main-header">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark container">
+    
+    <a href="index.html" class="navbar-brand fw-bold" href="#">
+      <i class="bi bi-house-door-fill"></i> Home
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      
+      <ul class="navbar-nav mx-auto gap-lg-3">
+        <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Explainer Videos</a></li>
+        <li class="nav-item"><a class="nav-link" href="student-register.html">I Need A Tutor</a></li>
+        <li class="nav-item"><a class="nav-link" href="tutor-register.html">Join As Tutor</a></li>
+        <li class="nav-item"><a class="nav-link" href="findbyidtutor.html">Find Tutor By Id</a></li>
+        <li class="nav-item"><a class="nav-link" href="findbyidtution.html">Find Tuition By Id</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            More
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Blog</a></li>
+            <li><a class="dropdown-item" href="#">FAQs</a></li>
+            <li><a class="dropdown-item" href="#">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="d-flex auth-links">
+        <a href="login.html" class="nav-link">
+          <i class="bi bi-box-arrow-in-right"></i> Log in
+        </a>
+        <a href="ragister.html" class="nav-link signup">
+          <i class="bi bi-person-plus-fill"></i> Sign Up
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+
+
+<body>
+
+
+    
+<div class="container my-5">
+
+  <div class="tuition-header d-flex justify-content-between align-items-start">
+    <div>
+      <h4 class="fw-bold">
+        Wanted home tutor for Grade 9 CBSE – Physics, Chemistry, Biology
+      </h4>
+      <small class="text-muted">Tuition ID: <b><span id="id_number"></span></b> </small>
+    </div>
+
+    <button class="btn btn-warning px-4 fw-semibold">
+      APPLY TUITION
+    </button>
+  </div>
+
+  <!-- Card -->
+  <div class="card shadow-sm mt-4">
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs px-3 pt-3">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Details</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Updates</a>
+      </li>
+    </ul>
+
+    <div class="card-body">
+      <div class="row">
+
+        <!-- LEFT -->
+        <div class="col-md-8">
+
+          <h6 class="section-title">Course Details</h6>
+
+
+
+
+
+
+
+
+          
+          <div class="row info-row">
+            <div class="col-sm-4 label">Course</div>
+            <div class="col-sm-8" id="course"></div>
+
+            <div class="col-sm-4 label">Subjects</div>
+            <div class="col-sm-8" id="subject"></div>
+
+            <div class="col-sm-4 label">Tuition Type</div>
+            <div class="col-sm-8" id="tuitionType"></div>
+
+            <div class="col-sm-4 label">City</div>
+            <div class="col-sm-8" id="city"></div>
+
+            <div class="col-sm-4 label">Location</div>
+            <div class="col-sm-8" id="location"></div>
+
+            <div class="col-sm-4 label">Pincode</div>
+            <div class="col-sm-8" id="pincode"></div>
+          </div>
+
+          <hr>
+
+          <h6 class="section-title">Preferences</h6>
+
+          
+          <div class="row info-row">
+            <div class="col-sm-4 label">Gender</div>
+            <div class="col-sm-8" id="gender"></div>
+
+            <div class="col-sm-4 label">Preferred Time</div>
+            <div class="col-sm-8" id="preferredTime"></div>
+
+            <div class="col-sm-4 label">Hourly Fee</div>
+            <div class="col-sm-8" id="hourlyFee"></div>
+          </div>
+
+          <hr>
+
+          <h6 class="section-title">Tuition Description</h6>
+          <p class="text-muted" id="description">
+            Wanted home tutor for Grade 9 CBSE, Physics, Chemistry and Biology.
+          </p>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="col-md-4">
+
+          <div class="contact-card text-center">
+            <h6 class="mb-3">
+              <i class="bi bi-lock-fill"></i> Contact Info
+            </h6>
+
+            <div class="blur-box" id="contactBox">
+              <p>📞 XXXXXXXX89</p>
+              <p>📧 xxxxx@gmail.com</p>
+              <p>🏠 XXXXXXXX</p>
+            </div>
+
+            <button class="btn btn-primary w-100 mb-2" id="loginBtn">
+              LOGIN TO VIEW
+            </button>
+
+            <button class="btn btn-outline-warning w-100" id="joinBtn">
+              JOIN AS TUTOR – FREE
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+  const type = params.get("type"); // student | tutor
+
+  if (!id || !type) {
+    Swal.fire({
+      icon: "error",
+      title: "Invalid Link",
+      text: "Profile ID or type is missing",
+      confirmButtonColor: "#dc3545"
+    });
+    return;
+  }
+
+  const adminToken = localStorage.getItem("admin_token");
+
+  Swal.fire({
+    title: "Loading Profile...",
+    text: "Please wait",
+    allowOutsideClick: false,
+    didOpen: () => Swal.showLoading()
+  });
+
+  fetch(`https://ncrhomr.vercel.app/${type}/${id}`, {
+    headers: adminToken ? { "X-Admin-Token": adminToken } : {}
+  })
+  .then(res => {
+    if (!res.ok) throw new Error("Profile not found");
+    return res.json();
+  })
+  .then(data => {
+    Swal.close();
+    showProfileFound(data);
+    fillData(data);
+  })
+  .catch(() => {
+    Swal.fire({
+      icon: "error",
+      title: "Profile Not Found",
+      text: "Invalid Profile ID or profile does not exist",
+      confirmButtonColor: "#dc3545"
+    });
+  });
+
+  function showProfileFound(data) {
+    Swal.fire({
+      icon: "success",
+      title: "Profile Found 🎉",
+      html: `
+        <div style="text-align:left;font-size:14px">
+          <b>Name:</b> ${data.name}<br>
+          <b>Type:</b> ${data.type.toUpperCase()}<br>
+          <b>Course:</b> ${data.course}<br>
+          <b>Subject:</b> ${data.subject}<br>
+          <b>City:</b> ${data.city || "N/A"}
+        </div>
+      `,
+      confirmButtonText: "View Details",
+      confirmButtonColor: "#ff7a00"
+    });
+  }
+
+  function fillData(data) {
+    console.log("Rendering profile:", data);
+
+    setText("course", data.course);
+    setText("subject", data.subject);
+    setText("tuitionType", data.preferred_mode);
+    setText("city", data.city);
+    setText("location", data.city);
+    setText("pincode", data.pincode);
+
+    document.getElementById("id_number").innerText = data.id;
+
+
+    setText("gender", data.gender || "Any");
+    setText("preferredTime", data.preferred_time || "Flexible");
+    setText("hourlyFee", data.hourly_fee || "Negotiable");
+
+    setText(
+      "description",
+      `${data.type === "student" ? "Wanted" : "Available"} tutor for ${data.course}, ${data.subject}`
+    );
+
+    const contactBox = document.getElementById("contactBox");
+
+    const isAdmin =
+      !!adminToken &&
+      typeof data.email === "string" &&
+      typeof data.mobile_no === "string";
+
+    console.log("ADMIN CHECK:", isAdmin);
+
+    if (isAdmin) {
+      contactBox.classList.remove("blurred"); // admin
+      
+
+
+
+      contactBox.innerHTML = `
+        <p>📞 ${data.mobile_no}</p>
+        <p>📧 ${data.email}</p>
+        <p>🌍 ${data.city}, ${data.country}</p>
+      `;
+
+      hide("loginBtn");
+      hide("joinBtn");
+
+    } else {
+      contactBox.classList.add("blurred");    // public
+    }
+  }
+
+  function setText(id, value) {
+    const el = document.getElementById(id);
+    if (!el) {
+      console.warn(`Missing element: ${id}`);
+      return;
+    }
+    el.innerText = value || "N/A";
+  }
+
+  function hide(id) {
+    const el = document.getElementById(id);
+    if (el) el.style.display = "none";
+  }
+
+});
+</script>
+
+
+
+
+</body>
+</html>

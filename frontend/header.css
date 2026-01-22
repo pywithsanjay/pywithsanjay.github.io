@@ -1,0 +1,47 @@
+.main-header {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("https://www.transparenttextures.com/patterns/brick-wall.png"),
+    #2c5d7d;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.navbar .nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 10px;
+}
+
+.navbar .nav-link:hover {
+  color: #ffd54f !important;
+}
+
+.auth-links .nav-link {
+  margin-left: 12px;
+}
+
+.auth-links .signup {
+  background: #ff9800;
+  border-radius: 4px;
+  padding: 6px 12px;
+  color: #fff !important;
+}
+
+.auth-links .signup:hover {
+  background: #ffa726;
+}
+
+.dropdown-menu {
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 991px) {
+  .auth-links {
+    margin-top: 10px;
+  }
+}

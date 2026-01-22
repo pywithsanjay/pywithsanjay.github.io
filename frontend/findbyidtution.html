@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Find Profile | Home Tutor Site</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+body{
+  background:#f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+/* ---------- Top Bar ---------- */
+.top-bar{
+  background:#fff;
+  border-bottom:1px solid #ddd;
+  padding:8px 0;
+}
+
+.breadcrumb-text{
+  font-size:13px;
+  color:#0d6efd;
+}
+
+.missed-call{
+  font-size:14px;
+  font-weight:600;
+  color:#0d6efd;
+}
+
+/* ---------- Header Search ---------- */
+.header-search{
+  background:#fff;
+  padding:15px 0;
+}
+
+.logo img{
+  height:45px;
+}
+
+.search-box{
+  display:flex;
+  gap:8px;
+}
+
+.search-box input,
+.search-box select{
+  height:38px;
+  font-size:14px;
+}
+
+.search-btn{
+  background:#ff6a00;
+  border:none;
+  color:#fff;
+  padding:0 14px;
+}
+
+/* ---------- Find Profile Card ---------- */
+.find-profile-title{
+  text-align:center;
+  font-size:20px;
+  font-weight:600;
+  color:#ff6a00;
+  margin:20px 0;
+}
+
+.profile-card{
+  background:#fff;
+  border-radius:6px;
+  padding:30px;
+  max-width:500px;
+  margin:0 auto 40px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.profile-input{
+  max-width:300px;
+  margin:0 auto;
+  position:relative;
+}
+
+.profile-input input{
+  height:40px;
+}
+
+.error-tooltip{
+  position:absolute;
+  top:-30px;
+  right:0;
+  background:#e53935;
+  color:#fff;
+  padding:4px 8px;
+  font-size:12px;
+  border-radius:4px;
+  display:none;
+}
+
+.error-tooltip::after{
+  content:"";
+  position:absolute;
+  bottom:-6px;
+  right:10px;
+  border-width:6px;
+  border-style:solid;
+  border-color:#e53935 transparent transparent transparent;
+}
+
+.details-btn{
+  background:#ff6a00;
+  border:none;
+  color:#fff;
+  padding:6px 18px;
+  font-size:14px;
+  margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container d-flex justify-content-between">
+    <div class="breadcrumb-text">
+      Home &nbsp;»&nbsp; More &nbsp;»&nbsp; FindProfile
+    </div>
+    <div class="missed-call">
+      Missed Call <i class="fa fa-phone"></i> 8367682255
+    </div>
+  </div>
+</div>
+
+<!-- Header Search -->
+<div class="header-search">
+  <div class="container d-flex align-items-center gap-3">
+
+    <div class="logo">
+      <img src="logo.png" alt="Home Tutor Site">
+    </div>
+
+    <div class="search-box flex-grow-1">
+      <select class="form-select" style="max-width:150px">
+        <option>Select City</option>
+        <option>Delhi</option>
+        <option>Mumbai</option>
+        <option>Bangalore</option>
+      </select>
+
+      <select class="form-select" style="max-width:130px">
+        <option>find Tutors</option>
+        <option>find Students</option>
+      </select>
+
+      <input type="text" class="form-control" placeholder="Enter Course or Subject Keywords to Search">
+      <button class="search-btn"><i class="fa fa-search"></i></button>
+    </div>
+
+    <a href="#" class="text-decoration-none">Join Us</a>
+  </div>
+</div>
+
+<!-- Find Profile -->
+<div class="container">
+
+  <div class="find-profile-title">Find Profile</div>
+
+  <div class="profile-card text-center">
+
+    <div class="profile-input">
+      <div class="error-tooltip" id="errorTip">* This field is required</div>
+
+      <label class="form-label fw-bold">
+        Enter Profile Id* :
+      </label>
+      <input type="text" id="profileId" class="form-control" placeholder="Enter Profile Id">
+    </div>
+
+    <button class="details-btn" onclick="validateProfile()">
+      DETAILS
+    </button>
+
+  </div>
+
+</div>
+
+<script>
+function validateProfile(){
+  const input = document.getElementById("profileId");
+  const error = document.getElementById("errorTip");
+
+  if(input.value.trim() === ""){
+    error.style.display = "block";
+    input.focus();
+  }else{
+    error.style.display = "none";
+    alert("Fetch profile: " + input.value);
+    // redirect or API call here
+  }
+}
+</script>
+
+</body>
+</html>

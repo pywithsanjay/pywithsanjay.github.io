@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>How It Works | Home Tutor Site</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body { font-family: 'Poppins', sans-serif; background:#f8f9fa; }
+
+.page-title {
+  font-weight: 700;
+  color: #4c7a1f;
+}
+
+.step-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  border-radius: 50%;
+  background: #e9f5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+.step-arrow {
+  font-size: 30px;
+  color: #adb5bd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-block h5 {
+  color: #ff6b00;
+  font-weight: 600;
+}
+
+.cta-section {
+  background: linear-gradient(135deg,#3b7ea1,#2b6b8e);
+  color: #fff;
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.btn-orange {
+  background: #ff6b00;
+  color: #fff;
+}
+.btn-orange:hover { background:#e65a00; }
+
+.footer-grid {
+  background: #2b6b8e;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer-grid h6 {
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255,255,255,.3);
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+}
+
+.footer-grid a {
+  color: #dbefff;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.footer-grid a:hover { color: #fff; }
+</style>
+
+
+</head>
+
+<body>
+  
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+  <div class="container">
+    <a href="index.html" class="navbar-brand fw-bold" href="#">
+      <i class="fa-solid fa-house-chimney"></i> HomeTutor
+    </a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="how-it-works.html">How It Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="student-register.html">Find Tutor</a></li>
+        <li class="nav-item"><a class="nav-link" href="tutor-register.html">Join As Tutor</a></li>
+        <li class="nav-item"><a class="nav-link" href="findbyidtutor.html">Find Tutor By Id</a></li>
+        <li class="nav-item"><a class="nav-link" href="findbyidtution.html">Find Tuition By Id</a></li>
+      </ul>
+      <div class="d-flex gap-2">
+        <a href="login.html" class="btn btn-outline-light btn-sm">Login</a>
+        <a href="ragister.html" class="btn btn-warning btn-sm">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container my-5">
+
+  <!-- Tabs -->
+  <ul class="nav nav-tabs justify-content-center mb-4">
+    <li class="nav-item">
+      <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#students">Students</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tutors">Tutors</button>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+
+    <!-- ================= STUDENTS ================= -->
+    <div class="tab-pane fade show active" id="students">
+
+      <h2 class="text-center page-title mb-5">How It Works For Students</h2>
+
+      <div class="row align-items-center text-center mb-5">
+        <div class="col-md-3 step-card">
+          <div class="step-icon">1</div>
+          <h5 class="mt-3">Register</h5>
+          <p>Create a free account & post tuition needs</p>
+        </div>
+
+        <div class="col-md-1 step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+        <div class="col-md-3 step-card">
+          <div class="step-icon">2</div>
+          <h5 class="mt-3">Search Tutor</h5>
+          <p>Find tutors & request a free demo</p>
+          <button class="btn btn-orange btn-sm mt-2">Get Free Demo</button>
+        </div>
+
+        <div class="col-md-1 step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+        <div class="col-md-3 step-card">
+          <div class="step-icon">3</div>
+          <h5 class="mt-3">Learn & Achieve</h5>
+          <p>Confirm tutor and start learning</p>
+        </div>
+      </div>
+
+      <div class="detail-block">
+        <h5>1. Register</h5>
+        <p>Register for free and post your tuition requirement. Premium members can directly contact tutors.</p>
+
+        <h5>2. Search for Tutor</h5>
+        <p>Browse verified tutors, request demo classes, negotiate fees, and finalize your tutor.</p>
+
+        <h5>3. Excel in Studies</h5>
+        <p>Get personalized attention and track progress regularly for better academic results.</p>
+      </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="tutors">
+
+      <h2 class="text-center page-title mb-5">How It Works For Tutors</h2>
+
+      <div class="row align-items-center text-center mb-5">
+        <div class="col-md-3 step-card">
+          <div class="step-icon">1</div>
+          <h5 class="mt-3">Create Profile</h5>
+          <p>Showcase your skills & experience</p>
+        </div>
+
+        <div class="col-md-1 step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+        <div class="col-md-3 step-card">
+          <div class="step-icon">2</div>
+          <h5 class="mt-3">Get Students</h5>
+          <p>Apply to tuition needs</p>
+        </div>
+
+        <div class="col-md-1 step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+        <div class="col-md-3 step-card">
+          <div class="step-icon">3</div>
+          <h5 class="mt-3">Start Earning</h5>
+          <p>Take demo & confirm tuition</p>
+        </div>
+      </div>
+
+      <div class="detail-block">
+        <h5>1. Create Profile</h5>
+        <p>Profiles with detailed information get maximum student attention.</p>
+
+        <h5>2. Get Students</h5>
+        <p>Apply to tuition needs that match your expertise.</p>
+
+        <h5>3. Start Earning</h5>
+        <p>Take demo classes, get confirmed, and earn consistently.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ================= CTA ================= -->
+  <div class="cta-section my-5 text-center">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <p>If you are a student/parent looking for a home tutor near you</p>
+       <a href="student-register.html"> <button class="btn btn-orange">I Need a Home Tutor</button></a>
+      </div>
+      <div class="col-md-6">
+        <p>If you are a tutor interested in teaching part time</p>
+       <a href="tutor-register.html"> <button class="btn btn-orange">Join As Tutor For Free</button> </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ================= FOOTER GRID ================= -->
+<section class="footer-grid">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-2">
+        <h6>Tuitions By City</h6>
+        <a>Mumbai</a><a>Delhi</a><a>Bengaluru</a><a>Hyderabad</a><a>Chennai</a>
+      </div>
+
+      <div class="col-md-3">
+        <h6>By Category</h6>
+        <a>Nursery / Kindergarten</a>
+        <a>Class 1 to 5</a>
+        <a>Class 6 to 10</a>
+        <a>Class 11 & 12</a>
+        <a>Engineering / Degree</a>
+      </div>
+
+      <div class="col-md-2">
+        <h6>By Course</h6>
+        <a>Nursery</a><a>Class 1</a><a>Class 5</a><a>Class 8</a><a>Class 10</a>
+      </div>
+
+      <div class="col-md-3">
+        <h6>By Subject</h6>
+        <a>Maths</a><a>Physics</a><a>Chemistry</a><a>Biology</a><a>English</a>
+      </div>
+
+      <div class="col-md-2">
+        <h6>Other</h6>
+        <a>Spoken English</a><a>IIT JEE</a><a>NEET</a><a>CAT</a><a>GRE</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

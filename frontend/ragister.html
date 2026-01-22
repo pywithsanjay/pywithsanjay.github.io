@@ -1,0 +1,54 @@
+import requests
+import json
+import time
+
+# -----------------------------
+# CONFIG
+# -----------------------------
+API_URL = "https://ncrhomr.vercel.app/tutor"
+HEADERS = {
+    "Content-Type": "application/json"
+}
+
+# -----------------------------
+# LOAD JSON FILE
+# -----------------------------
+JSON_FILE = "tutors.json"   # save your bulk JSON here
+
+with open(JSON_FILE, "r", encoding="utf-8") as f:
+    tutors = json.load(f)
+
+# -----------------------------
+# POST LOOP
+# -----------------------------
+success = 0
+failed = 0
+
+for idx, tutor in enumerate(tutors, start=1):
+    print(f"\n📤 Uploading {idx}/{len(tutors)} → {tutor.get('name')}")
+
+    try:
+        res = requests.post(API_URL, headers=HEADERS, json=tutor, timeout=10)
+
+        if res.status_code in [200, 201]:
+            print("✅ Success:", res.json().get("message", "OK"))
+            success += 1
+        else:
+            print("❌ Failed:", res.status_code)
+            print(res.text)
+            failed += 1
+
+        time.sleep(0.5)  # prevent rate limit
+
+    except Exception as e:
+        print("⚠️ Error:", e)
+        failed += 1
+
+# -----------------------------
+# SUMMARY
+# -----------------------------
+print("\n======================")
+print("🎉 BULK UPLOAD DONE")
+print("✅ Success:", success)
+print("❌ Failed:", failed)
+print("======================")
