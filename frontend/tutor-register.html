@@ -333,121 +333,123 @@ body{
 
         <div class="register-box">
 
-  <div class="register-header">
-    <h5>I am a Tutor</h5>
-    <span class="badge-free">FREE Registration</span>
+    <div class="register-header">
+      <h5>I am a Tutor</h5>
+      <span class="badge-free">FREE Registration</span>
+    </div>
+
+    <form id="tutorForm">
+
+      <!-- ROW 1 -->
+      <div class="row g-2 mb-2">
+        <div class="col-md-6">
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa fa-user"></i></span>
+            <input type="text" id="name" class="form-control" placeholder="Full Name" required>
+
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa fa-phone"></i></span>
+            <input type="tel" id="mobile" class="form-control" placeholder="Mobile Number" required>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 2 -->
+      <div class="row g-2 mb-2">
+        <div class="col-md-6">
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+            <input type="email" id="email" class="form-control" placeholder="Email Address" required>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <input type="text" id="qualification" class="form-control" placeholder="Qualification bsc,b.tECH" required>
+        </div>
+      </div>
+
+      <!-- ROW 3 -->
+      <div class="row g-2 mb-2">
+        <div class="col-md-6">
+          <input type="text" id="course" class="form-control" placeholder="Course (eg. Mathematics)" required>
+        </div>
+
+        <div class="col-md-6">
+          <input type="text" id="subject" class="form-control" placeholder="Subject (eg. Algebra)" required>
+        </div>
+      </div>
+
+      <!-- ROW 4 -->
+      <div class="row g-2 mb-2">
+        <div class="col-md-6">
+          <input type="text" id="experience" class="form-control" placeholder="Experience (eg. 5 years)" required>
+        </div>
+
+        <div class="col-md-6">
+          <select id="mode" class="form-select" required>
+            <option value="">Preferred Mode</option>
+            <option>Online</option>
+            <option>Offline</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ROW 5 -->
+      <div class="row g-2 mb-2">
+        <div class="col-md-6">
+          <select id="language" class="form-select" required>
+            <option value="">Language</option>
+            <option>English</option>
+            <option>Hindi</option>
+            <option>Tamil</option>
+            <option>Telugu</option>
+            <option>Kannada</option>
+            <option>Malayalam</option>
+            <option>Marathi</option>
+            <option>Bengali</option>
+            <option>Gujarati</option>
+            <option>Punjabi</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <input id="city" type="text" class="form-control" placeholder="City (eg. Delhi)" required>
+        </div>
+      </div>
+
+      <!-- ROW 6 (AUTO FIELDS) -->
+      <div class="row g-2 mb-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control" value="India" readonly>
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" value="Asia/Kolkata" readonly>
+        </div>
+      </div>
+
+      <div class="note mb-2">We don’t misuse your phone number or email</div>
+
+      <div class="d-grid">
+        <button class="btn btn-orange">
+          JOIN AS TUTOR FOR FREE
+        </button>
+      </div>
+
+      <p class="text-center mt-3 note">
+        Already a member? <a href="#">Login</a>
+      </p>
+
+    </form>
   </div>
 
-  <form>
+      </div>
 
-    <!-- ROW 1 -->
-    <div class="row g-2 mb-2">
-      <div class="col-md-6">
-        <div class="input-group">
-          <span class="input-group-text"><i class="fa fa-user"></i></span>
-          <input type="text" class="form-control" placeholder="Full Name" required>
         </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="input-group">
-          <span class="input-group-text"><i class="fa fa-phone"></i></span>
-          <input type="tel" class="form-control" placeholder="Mobile Number" required>
-        </div>
-      </div>
-    </div>
-
-    <!-- ROW 2 -->
-    <div class="row g-2 mb-2">
-      <div class="col-md-6">
-        <div class="input-group">
-          <span class="input-group-text"><i class="fa fa-envelope"></i></span>
-          <input type="email" class="form-control" placeholder="Email Address" required>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <input type="text" class="form-control" placeholder="Qualification (eg. MSc Maths)" required>
-      </div>
-    </div>
-
-    <!-- ROW 3 -->
-    <div class="row g-2 mb-2">
-      <div class="col-md-6">
-        <input type="text" class="form-control" placeholder="Course (eg. Mathematics)" required>
-      </div>
-
-      <div class="col-md-6">
-        <input type="text" class="form-control" placeholder="Subject (eg. Algebra)" required>
-      </div>
-    </div>
-
-    <!-- ROW 4 -->
-    <div class="row g-2 mb-2">
-      <div class="col-md-6">
-        <input type="text" class="form-control" placeholder="Experience (eg. 5 years)" required>
-      </div>
-
-      <div class="col-md-6">
-        <select class="form-select" required>
-          <option value="">Preferred Mode</option>
-          <option>Online</option>
-          <option>Offline</option>
-        </select>
-      </div>
-    </div>
-
-    <!-- ROW 5 -->
-    <div class="row g-2 mb-2">
-      <div class="col-md-6">
-        <select class="form-select" required>
-          <option value="">Language</option>
-          <option>English</option>
-          <option>Hindi</option>
-          <option>Tamil</option>
-          <option>Telugu</option>
-          <option>Kannada</option>
-          <option>Malayalam</option>
-          <option>Marathi</option>
-          <option>Bengali</option>
-          <option>Gujarati</option>
-          <option>Punjabi</option>
-        </select>
-      </div>
-
-      <div class="col-md-6">
-        <input type="text" class="form-control" placeholder="City (eg. Delhi)" required>
-      </div>
-    </div>
-
-    <!-- ROW 6 (AUTO FIELDS) -->
-    <div class="row g-2 mb-3">
-      <div class="col-md-6">
-        <input type="text" class="form-control" value="India" readonly>
-      </div>
-      <div class="col-md-6">
-        <input type="text" class="form-control" value="Asia/Kolkata" readonly>
-      </div>
-    </div>
-
-    <div class="note mb-2">We don’t misuse your phone number or email</div>
-
-    <div class="d-grid">
-      <button class="btn btn-orange">
-        JOIN AS TUTOR FOR FREE
-      </button>
-    </div>
-
-    <p class="text-center mt-3 note">
-      Already a member? <a href="#">Login</a>
-    </p>
-
-  </form>
-</div>
-
-    </div>
-
-  </div>
 </div>
 
 
@@ -482,6 +484,94 @@ body{
 </section>
 
 
+<script>
+document.getElementById("tutorForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const data = {
+    name: document.getElementById("name").value.trim(),
+    mobile_no: document.getElementById("mobile").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    course: document.getElementById("course").value.trim(),
+    subject: document.getElementById("subject").value.trim(),
+    qualification: document.getElementById("qualification").value.trim(),
+    experience: document.getElementById("experience").value.trim(),
+    preferred_mode: document.getElementById("mode").value.toLowerCase(),
+    language: document.getElementById("language").value,
+    country: "India",
+    city: document.getElementById("city").value.trim(),
+    timezone: "Asia/Kolkata"
+  };
+
+  // 🔍 Validation
+  if (!data.name || !data.mobile_no || !data.email) {
+    Swal.fire({
+      icon: "warning",
+      title: "Missing Fields",
+      text: "Please fill all required fields",
+      confirmButtonColor: "#ff6b00"
+    });
+    return;
+  }
+
+  // 🔄 Loader
+  Swal.fire({
+    title: "Registering You...",
+    text: "Please wait while we add you as a tutor",
+    allowOutsideClick: false,
+    didOpen: () => Swal.showLoading()
+  });
+
+  try {
+    const res = await fetch("https://ncrhomr.vercel.app/tutor", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+    Swal.close();
+
+    if (res.ok) {
+      Swal.fire({
+        icon: "success",
+        title: "You're Added as a Teacher 🎉",
+        html: `
+          <b>Name:</b> ${data.name}<br>
+          <b>Course:</b> ${data.course}<br>
+          <b>Subject:</b> ${data.subject}<br><br>
+          Our team will contact you soon for a <b>FREE DEMO</b> 💖
+        `,
+        confirmButtonText: "Awesome!",
+        confirmButtonColor: "#ff6b00"
+      });
+
+      document.getElementById("tutorForm").reset();
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Registration Failed ❌",
+        text: result.detail || "Something went wrong",
+        confirmButtonColor: "#dc3545"
+      });
+    }
+
+  } catch (err) {
+    Swal.close();
+    Swal.fire({
+      icon: "error",
+      title: "Server Error ⚠️",
+      text: "Could not connect to server",
+      confirmButtonColor: "#dc3545"
+    });
+  }
+});
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 
