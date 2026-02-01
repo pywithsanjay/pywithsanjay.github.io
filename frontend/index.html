@@ -32,10 +32,11 @@
         <li class="nav-item"><a class="nav-link" href="tutor-register.html">Join As Tutor</a></li>
         <li class="nav-item"><a class="nav-link" href="findbyidtutor.html">Find Tutor By Id</a></li>
         <li class="nav-item"><a class="nav-link" href="findbyidtution.html">Find Tuition By Id</a></li>      </ul>
-      <div class="d-flex gap-2">
-        <a href="login.html" class="btn btn-outline-light btn-sm">Login</a>
-        <a href="ragister.html" class="btn btn-warning btn-sm">Sign Up</a>
-      </div>
+       <div class="d-flex gap-2" id="authButtons">
+  <a href="login.html" class="btn btn-outline-light btn-sm" id="loginBtn">Login</a>
+  <a href="ragister.html" class="btn btn-warning btn-sm" id="signupBtn">Sign Up</a>
+</div>
+
     </div>
   </div>
 </nav>
@@ -208,6 +209,56 @@ function doSearch() {
 
   window.location.href = `search.html?${params.toString()}`;
 }
+
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const token = localStorage.getItem("admin_token");
+
+  const authBox = document.getElementById("authButtons");
+
+  if (token) {
+    // 🔁 Replace Login with Logout
+    authBox.innerHTML = `
+      <button class="btn btn-danger btn-sm" id="logoutBtn">
+        <i class="fa-solid fa-right-from-bracket"></i> Logout
+      </button>
+    `;
+
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      Swal.fire({
+        title: "Logout?",
+        text: "You will be logged out of admin session",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#dc3545",
+        cancelButtonColor: "#6c757d",
+        confirmButtonText: "Yes, Logout"
+      }).then(result => {
+        if (result.isConfirmed) {
+          localStorage.removeItem("admin_token");
+
+          Swal.fire({
+            icon: "success",
+            title: "Logged Out 👋",
+            text: "Session ended successfully",
+            timer: 1500,
+            showConfirmButton: false
+          });
+
+          setTimeout(() => {
+            window.location.href = "index.html";
+          }, 1500);
+        }
+      });
+    });
+  }
+});
 </script>
 
 
