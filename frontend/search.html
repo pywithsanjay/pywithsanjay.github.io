@@ -150,6 +150,21 @@ body {
   transform: translateY(-4px);
 }
 
+.fade-in {
+  animation: fadeUp 0.4s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .featured-badge {
   position: absolute;
   top: -8px;
@@ -314,39 +329,62 @@ body {
 </div>
 
 
-
 <script>
-
 const params = new URLSearchParams(window.location.search);
-const q = params.get("q");
-const city = params.get("city");
+const q = params.get("q") || "";
+const city = params.get("city") || "";
 const type = params.get("type") || "tutor";
 
-let apiUrl = `https://ncrhomr.vercel.app/search?type=${type}`;
+let page = 1;
+let loading = false;
+let hasMore = true;
 
-if (q) apiUrl += `&q=${encodeURIComponent(q)}`;
-if (city) apiUrl += `&city=${encodeURIComponent(city)}`;
-
+const box = document.getElementById("results");
 const adminToken = localStorage.getItem("admin_token");
 
-fetch(apiUrl, {
-  headers: adminToken ? { "X-Admin-Token": adminToken } : {}
-})
-.then(res => res.json())
-.then(renderResults);
+// 🔹 Build API URL
+function buildUrl() {
+  let url = `https://ncrhomr.vercel.app/search?type=${type}&page=${page}`;
+  if (q) url += `&q=${encodeURIComponent(q)}`;
+  if (city) url += `&city=${encodeURIComponent(city)}`;
+  return url;
+}
 
-function renderResults(resp) {
-  const box = document.getElementById("results");
-  box.innerHTML = "";
+// 🔹 Load Data
+async function loadResults() {
+  if (loading || !hasMore) return;
 
-  if (!resp.data || resp.data.length === 0) {
-    box.innerHTML = "<p class='text-center'>No results found 💔</p>";
-    return;
+  loading = true;
+  showLoader();
+
+  try {
+    const res = await fetch(buildUrl(), {
+      headers: adminToken ? { "X-Admin-Token": adminToken } : {}
+    });
+
+    const data = await res.json();
+
+    if (!data.data || data.data.length === 0) {
+      hasMore = false;
+      showEndMessage();
+      return;
+    }
+
+    renderResults(data.data);
+    page++;
+  } catch (err) {
+    console.error("Load error:", err);
+  } finally {
+    hideLoader();
+    loading = false;
   }
+}
 
-  resp.data.forEach(item => {
+// 🔹 Render Cards
+function renderResults(items) {
+  items.forEach(item => {
     box.innerHTML += `
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6 fade-in">
         <div class="profile-card">
 
           <!-- HEADER -->
@@ -368,8 +406,8 @@ function renderResults(resp) {
             </div>
           </div>
 
-          <!-- COURSE + ICONS -->
-          <div class="mb-2 d-flex align-items-center justify-content-between">
+          <!-- COURSE -->
+          <div class="mb-2 d-flex justify-content-between align-items-center">
             <div>
               <div class="label">Course</div>
               <div class="value">${item.course}</div>
@@ -429,8 +467,53 @@ function renderResults(resp) {
   });
 }
 
+// 🔹 Scroll Detection
+window.addEventListener("scroll", () => {
+  const scrollBottom =
+    window.innerHeight + window.scrollY >=
+    document.body.offsetHeight - 200;
 
+  if (scrollBottom) {
+    loadResults();
+  }
+});
+
+// 🔹 Loader UI
+function showLoader() {
+  if (!document.getElementById("loader")) {
+    const div = document.createElement("div");
+    div.id = "loader";
+    div.className = "text-center my-4";
+    div.innerHTML = `
+      <div class="spinner-border text-warning"></div>
+      <p class="mt-2">Loading more tutors...</p>
+    `;
+    box.after(div);
+  }
+}
+
+function hideLoader() {
+  const loader = document.getElementById("loader");
+  if (loader) loader.remove();
+}
+
+// 🔹 End Message
+function showEndMessage() {
+  if (!document.getElementById("endMsg")) {
+    const div = document.createElement("div");
+    div.id = "endMsg";
+    div.className = "text-center my-4 text-muted";
+    div.innerHTML = `🎉 You’ve reached the end of results`;
+    box.after(div);
+  }
+}
+
+// 🔹 First Load
+loadResults();
 </script>
+
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
