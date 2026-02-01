@@ -442,6 +442,70 @@ body{
   </div>
 </section>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+document.getElementById("studentForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  const payload = Object.fromEntries(formData.entries());
+
+  Swal.fire({
+    title: "Submitting Request...",
+    text: "Please wait while we find tutors for you",
+    allowOutsideClick: false,
+    didOpen: () => Swal.showLoading()
+  });
+
+  try {
+    const res = await fetch("https://ncrhomr.vercel.app/student", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await res.json();
+
+    Swal.close();
+
+    if (res.ok) {
+      Swal.fire({
+        icon: "success",
+        title: "Request Submitted 🎉",
+        html: `
+          <div style="text-align:left;font-size:14px">
+            <b>Name:</b> ${payload.name}<br>
+            <b>City:</b> ${payload.city}<br>
+            <b>Course:</b> ${payload.course}<br>
+            <b>Subject:</b> ${payload.subject}<br>
+            <br>
+            Our team will contact you shortly!
+          </div>
+        `,
+        confirmButtonText: "Done",
+        confirmButtonColor: "#ff6b00"
+      });
+
+      form.reset();
+    } else {
+      throw new Error(data.detail || "Failed to submit");
+    }
+
+  } catch (err) {
+    Swal.fire({
+      icon: "error",
+      title: "Submission Failed ❌",
+      text: err.message || "Server error, please try again",
+      confirmButtonColor: "#dc3545"
+    });
+  }
+});
+</script>
 
 
 
